@@ -1,0 +1,39 @@
+h3.page-title
+  | Blank Page
+  small blank page
+ul.breadcrumb
+  li
+    i.icon-home
+    a href="index.html"  Home
+    i.icon-angle-right
+  li
+    a href="#"  Layouts
+    i.icon-angle-right
+  li
+    a href="#"  Blank Page
+  /! END PAGE TITLE &amp; BREADCRUMB
+/! END PAGE HEADER
+/! BEGIN PAGE CONTENT
+.row-fluid
+  .span12
+    | Blank page content goes here
+
+/ h1 Listing admin_dashboards
+
+/ table
+/   thead
+/     tr
+/       th
+/       th
+/       th
+
+/   tbody
+/     - @admin_dashboards.each do |admin_dashboard|
+/       tr
+/         td = link_to 'Show', admin_dashboard
+/         td = link_to 'Edit', edit_admin_dashboard_path(admin_dashboard)
+/         td = link_to 'Destroy', admin_dashboard, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+/ br
+
+/ = link_to 'New Dashboard', new_admin_dashboard_path

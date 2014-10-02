@@ -1,0 +1,122 @@
+doctype html
+/![if IE 8] <html lang="en" class="ie8"
+/![if IE 9] <html lang="en" class="ie9"
+/! [if !IE]><!
+html lang="en" 
+  /! <![endif]
+  /! BEGIN HEAD
+  head
+    meta charset="utf-8" /
+    title 后台管理系统
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    /! BEGIN GLOBAL MANDATORY STYLES
+    = stylesheet_link_tag    'application', media: 'all'  
+    = javascript_include_tag 'application'
+
+  /! END HEAD
+  /! BEGIN BODY
+  body.page-header-fixed
+    /! BEGIN HEADER
+    .header.navbar.navbar-inverse.navbar-fixed-top
+      /! BEGIN TOP NAVIGATION BAR
+      .navbar-inner
+        .container-fluid
+          /! BEGIN LOGO
+          a.brand href="index.html" 
+            img alt="logo" src="#{asset_path('logo.png')}" /
+          /! END LOGO
+          /! BEGIN RESPONSIVE MENU TOGGLER
+          a.btn-navbar.collapsed data-target=".nav-collapse" data-toggle="collapse" href="javascript:;" 
+            img alt="" src="#{asset_path('menu-toggler.png')}" /
+          /! END RESPONSIVE MENU TOGGLER
+          /! BEGIN TOP NAVIGATION MENU
+          ul.nav.pull-right
+            /! BEGIN USER LOGIN DROPDOWN
+            li.dropdown.user
+              a.dropdown-toggle data-toggle="dropdown" href="#" 
+                img alt="" src="#{asset_path('avatar1_small.jpg')}" /
+                span.username Bob Nilson
+                i.icon-angle-down
+              ul.dropdown-menu
+                li
+                  a href="extra_profile.html" 
+                    i.icon-user
+                    | My Profile
+                li
+                  a href="page_calendar.html" 
+                    i.icon-calendar
+                    | My Calendar
+                li
+                  a href="inbox.html" 
+                    i.icon-envelope
+                    | My Inbox(3)
+                li
+                  a href="#" 
+                    i.icon-tasks
+                    | My Tasks
+                li.divider
+                li
+                  a href="extra_lock.html" 
+                    i.icon-lock
+                    | Lock Screen
+                li
+                  a href="login.html" 
+                    i.icon-key
+                    | Log Out
+            /! END USER LOGIN DROPDOWN
+          /! END TOP NAVIGATION MENU
+      /! END TOP NAVIGATION BAR
+    /! END HEADER
+    /! BEGIN CONTAINER
+    .page-container.row-fluid
+      /! BEGIN SIDEBAR
+      .page-sidebar.nav-collapse.collapse
+        /! BEGIN SIDEBAR MENU
+        ul.page-sidebar-menu
+          li
+            /! BEGIN SIDEBAR TOGGLER BUTTON
+            .sidebar-toggler.hidden-phone
+            /! BEGIN SIDEBAR TOGGLER BUTTON
+          li
+            /! BEGIN RESPONSIVE QUICK SEARCH FORM
+            form.sidebar-search
+              .input-box
+                a.remove href="javascript:;" 
+                input placeholder="Search..." type="text" /
+                input.submit type="button" value=(" ") /
+            /! END RESPONSIVE QUICK SEARCH FORM
+          li.start.active
+            a href="javascript:;" 
+              i.icon-home
+              span.title Dashboard
+      /! BEGIN PAGE
+      .page-content
+        /! BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM
+        #portlet-config.modal.hide
+          .modal-header
+            button.close data-dismiss="modal" type="button" 
+            h3 portlet Settings
+          .modal-body
+            p Here will be a configuration form
+        /! END SAMPLE PORTLET CONFIGURATION MODAL FORM
+        /! BEGIN PAGE CONTAINER
+        .container-fluid
+          /! BEGIN PAGE HEADER
+          =yield
+          /! END PAGE CONTENT
+        /! END PAGE CONTAINER
+      /! END PAGE
+    /! END CONTAINER
+    /! BEGIN FOOTER
+    .footer
+      .footer-inner
+        | 2013 &copy; Metronic by keenthemes.
+      .footer-tools
+        span.go-top
+          i.icon-angle-up
+    /! END FOOTER
+    /! BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time)
+    /! BEGIN CORE PLUGINS
+    / script src="media/js/jquery-1.10.1.min.js" type="text/javascript" 
+    
+    
