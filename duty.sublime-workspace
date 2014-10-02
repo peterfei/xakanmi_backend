@@ -1,0 +1,468 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ima",
+				"image_path"
+			],
+			[
+				"f",
+				"fun	function …"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"git add",
+				"Git: Add..."
+			],
+			[
+				"gitcomm",
+				"Git: Commit"
+			],
+			[
+				"gitcom",
+				"Set Syntax: Git Commit Message"
+			],
+			[
+				"ali",
+				"Preferences: Alignment File Settings – Syntax Specific – User"
+			],
+			[
+				"alignment",
+				"Preferences: Alignment File Settings – User"
+			],
+			[
+				"git",
+				"Git: Custom Command"
+			],
+			[
+				"git:comm",
+				"Git: Amend Commit"
+			],
+			[
+				"gitco",
+				"Git: Commit"
+			],
+			[
+				"git:add",
+				"Git: Add Current File"
+			],
+			[
+				"goto",
+				"Emmet: Go to Matching Pair"
+			],
+			[
+				"gitl",
+				"Git: Log All"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #!/usr/bin/env"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"ls",
+			"cd ..",
+			"choe",
+			"echo",
+			"dd"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/liufei/ROR/duty"
+	],
+	"file_history":
+	[
+		"/Users/liufei/ROR/octopress/source/_posts/2014-09-27-mac-sublime3.markdown",
+		"/Users/liufei/ROR/octopress/source/_includes/head.html",
+		"/Users/liufei/ROR/octopress/source/_posts/2014-09-25-php-magento-productions.markdown",
+		"/Users/liufei/ROR/octopress/source/_posts/2014-09-27-ruby-meta.markdown",
+		"/Users/liufei/ROR/octopress/source/_posts/2014-09-22-rails-subselect.markdown",
+		"/Users/liufei/ROR/octopress/source/_posts/2013-04-16-rails-xiang-mu-zhong-dui-select2de-gao-ji-shi-yong.markdown",
+		"/Users/liufei/ROR/octopress/source/_includes/custom/category_feed.xml",
+		"/Users/liufei/ROR/octopress/source/_includes/footer.html",
+		"/Users/liufei/ROR/octopress/source/_posts/2014-09-18-layout-plus-content-for.markdown",
+		"/Users/liufei/ROR/octopress/source/_posts/2014-09-18-bible-plus-everyday.markdown",
+		"/Users/liufei/ROR/octopress/source/_includes/custom/asides/weibo.html",
+		"/Users/liufei/ROR/octopress/source/_includes/article.html",
+		"/Users/liufei/ROR/octopress/source/_includes/post/duoshuo.html",
+		"/Users/liufei/ROR/octopress/source/_includes/custom/footer.html",
+		"/Users/liufei/ROR/octopress/source/_layouts/page.html",
+		"/Users/liufei/ROR/octopress/source/_layouts/post.html",
+		"/Users/liufei/ROR/octopress/source/_includes/post/sharing.html",
+		"/Users/liufei/ROR/octopress/source/_includes/post/share_comment.html",
+		"/Users/liufei/ROR/octopress/plugins/related_posts.rb",
+		"/Users/liufei/ROR/octopress/source/_includes/custom/asides/recent_comments.html",
+		"/Users/liufei/ROR/octopress/sass/custom/_styles.scss",
+		"/Users/liufei/ROR/octopress/source/atom.xml",
+		"/Users/liufei/ROR/octopress/source/_includes/header.html",
+		"/Users/liufei/ROR/octopress/.themes/compbits/source/_includes/footer.html",
+		"/Users/liufei/ROR/octopress/source/feed/index.xml",
+		"/Users/liufei/ROR/octopress/plugins/post_footer_filter.rb",
+		"/Users/liufei/ROR/octopress/plugins/post_filters.rb",
+		"/Users/liufei/ROR/diaspora/config/diaspora.yml",
+		"/Users/liufei/ROR/diaspora/app/views/layouts/application.html.haml",
+		"/Users/liufei/ROR/diaspora/config/defaults.yml",
+		"/Users/liufei/ROR/diaspora/app/views/shared/_links.haml",
+		"/Users/liufei/ROR/diaspora/app/views/layouts/_footer.html.haml",
+		"/Users/liufei/ROR/diaspora/app/assets/javascripts/widgets/header.js",
+		"/Users/liufei/ROR/diaspora/graphics/heart.svg",
+		"/Users/liufei/ROR/diaspora/app/assets/stylesheets/footer.css.scss",
+		"/Users/liufei/ROR/diaspora/db/migrate/20110211021926_fix_target_on_notification.rb",
+		"/Users/liufei/ROR/diaspora/FederationProcfile",
+		"/Users/liufei/ROR/diaspora/config/application.rb",
+		"/Users/liufei/ROR/diaspora/db/migrate/20110319005509_add_processed_to_post.rb",
+		"/Users/liufei/ROR/diaspora/app/presenters/aspect_presenter.rb",
+		"/Users/liufei/ROR/diaspora/AUTHORS",
+		"/Users/liufei/ROR/diaspora/app/views/layouts/application.mobile.haml",
+		"/Users/liufei/ROR/diaspora/README.md",
+		"/Users/liufei/ROR/diaspora/app/models/user.rb",
+		"/Users/liufei/ROR/diaspora/redis-integration1.conf",
+		"/Users/liufei/ROR/diaspora/config/database.yml",
+		"/Users/liufei/ROR/diaspora/Gemfile",
+		"/Users/liufei/ROR/diaspora/features/step_definitions/user_steps.rb",
+		"/Users/liufei/ROR/diaspora/config/unicorn.rb",
+		"/Users/liufei/ROR/diaspora/script/server",
+		"/Users/liufei/ROR/diaspora/config/initializers/set_up_image_redirects.rb",
+		"/Users/liufei/ROR/diaspora/features/desktop/signs_up.feature",
+		"/Users/liufei/ROR/diaspora/app/assets/javascripts/app/views/single-post-viewer/single_post_interactions.js",
+		"/Users/liufei/ROR/diaspora/app/views/notifier/single_admin.markerb",
+		"/Users/liufei/ROR/diaspora/app/assets/stylesheets/new_styles/_login.scss",
+		"/Users/liufei/ROR/diaspora/features/desktop/logs_in_and_out.feature",
+		"/Users/liufei/ROR/diaspora/features/desktop/logged_out_browsing.feature",
+		"/Users/liufei/ROR/diaspora/app/models/like.rb",
+		"/Users/liufei/ROR/diaspora/app/assets/javascripts/view.js",
+		"/Users/liufei/ROR/diaspora/config/locales/diaspora/vi.yml",
+		"/Users/liufei/ROR/diaspora/app/views/publics/webfinger.erb",
+		"/Users/liufei/ROR/diaspora/app/views/notifier/liked.markerb",
+		"/Users/liufei/ROR/diaspora/spec/javascripts/app/views/location_view_spec.js",
+		"/Users/liufei/ROR/diaspora/app/views/tags/_followed_tags_listings.haml",
+		"/Users/liufei/Downloads/metronic.bootstrap/media/css/font-awesome.css",
+		"/Users/liufei/ROR/patient/config/routes.rb",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/glyphicons.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/halflings.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/inbox.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/jquery.fancybox.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/jquery.fileupload-ui.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/jquery.gritter.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/lock.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/login-soft.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/coming-soon.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/default.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/dropzone.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/DT_bootstrap.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/font-awesome.css",
+		"/Users/liufei/ROR/patient/app/views/home/index.html.slim",
+		"/Users/liufei/ROR/patient/app/views/layouts/application.html.erb",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/font-awesome.min.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/colorpicker.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/multi-select-metro.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/profile.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/search.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/select2_metro.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/style-metro.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/style.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/uniform.default.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/bootstrap-tree.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/chosen.css",
+		"/Users/liufei/ROR/patient/app/assets/stylesheets/bootstrap.min.css",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/07110a3d50cf2e40114c540e262c8cbb",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/10328cb5f1c915eef4e2466708a9410a",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/12e81ec3aacb924e7ea211c3440a3b02",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/1450c8f5d2b6e201d72fa175586bbd97",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/18cc98678b24c7adf3eba9cd8b0287cb",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/195b0c0ece1db236806e2ec2310f1479",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/1b77abb6bee52fa8d68ee7e81077ff20",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/21ffda50610d962dad20e7c69d7adb2e",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/24c28286dda1b6064aaa9ab51dd1abe3",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/25c7d30ca5ab02f253a706278d371884",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/29967ed4c0b78f022c40f98dd6ebf155",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/2d373d1a39cf301201ddd44fe1803925",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/357970feca3ac29060c1e3861e2c0953",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/374d7489826341abf7436c148604943d",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/378ae42fa633d06f58f9e76b1e0424a4",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3b670c9fa3a25f962fb8152bcfe0b342",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3bc444b62afe81fc6f16b4ac8a63d04c",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3e773e8984a02eb242ac92342b3653ae",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3fd9412156bcbb7ffb2768b082b02759",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/4666c1fbc8fb1de0fe46806406437ba3",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/48ccee950cbfd3708d4bc1a24c493e94",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/496f8473d1d5109599b865189c6216d0",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/49a885d3e06fe33a5c64f07b6313daeb",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/4d6e5dfee80a447fd4640be5755bf528",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/4ea33e825e6e38bd22dccab488a0255b",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/542c740f339d1e8da9da64cc19145929",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/551fa768f4d5776fab14a3b270c4d064",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/555352f27fae8d78fc8d68b2572bdf6b",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/5730afc0d151dd1e10e88b7b3e6adbc1",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/598b5c2796e2bea02c34549c8f4eaccd",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/615bc5069da99c4d28be81e434712369",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/63b0a666b5b5c3be731db8ff04101b53",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/69b24dd2e7d902197e380e7e344499e1",
+		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/69df01e143382e29baa23c1019faf7e7"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"|",
+			"peterfei",
+			"simple_search",
+			"keywords",
+			"#\n",
+			" ",
+			"邱健",
+			"require",
+			"true",
+			"asides",
+			"aside",
+			"baseurl",
+			"diaspora",
+			"Diaspora",
+			"diaspora",
+			"    \n",
+			"page_title",
+			"redis",
+			"environment",
+			"assets.serve",
+			"asset",
+			"rails_environment",
+			"ssl",
+			"require_ssl",
+			"https",
+			"ssl",
+			"redis",
+			"server",
+			"certificate authorities",
+			"certificate",
+			"../image/",
+			"css",
+			"雪山",
+			"<script type=\"text/javascript\">\n            var myScroll;\n\n            function loaded() {\n                myScroll = new iScroll('wrapper', {\n                    snap: true,\n                    momentum: false,\n                    hScrollbar: false,\n                    onScrollEnd: function () {\n                        document.querySelector('#indicator > li.active').className = '';\n                        document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';\n                    }\n                });\n \n            }\n\n            document.addEventListener('DOMContentLoaded', loaded, false);\n        </script>",
+			"            </",
+			"1280",
+			"swiper-slide swiper-slide-visible swiper-slide-active",
+			" swiper-slide-visible",
+			"swiper-slide-visible",
+			"\n        ",
+			"        \n",
+			"memer",
+			"user",
+			", "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"###",
+			"####",
+			"##",
+			"PatientHome",
+			"assets/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"project": "duty.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"foo",
+				"app/views/layouts/_footer.html.haml"
+			],
+			[
+				"application",
+				"app/views/layouts/application.html.haml"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"index_1143",
+				"tpl/Wap/default/Index_1143.html"
+			],
+			[
+				"index_new",
+				"tpl/Wap/default/Card_index_newsalon.html"
+			],
+			[
+				"photo",
+				"weiwincms/Lib/Action/Wap/PhotoAction.class.php"
+			],
+			[
+				"104",
+				"tpl/Wap/default/Index_104_index.html"
+			],
+			[
+				"index.tpl.php",
+				"weiwincms/Lib/ORG/index.Tpl.php"
+			],
+			[
+				"300",
+				"tpl/Wap/default/Index_300.html"
+			],
+			[
+				"d",
+				"weiwindata/conf/db.php"
+			],
+			[
+				"lib/org/index.tpl.php",
+				"weiwincms/Lib/ORG/index.Tpl.php"
+			],
+			[
+				"tmpl",
+				"weiwincms/Lib/Action/User/TmplsAction.class.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 359.0,
+		"selected_items":
+		[
+		],
+		"width": 384.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 194.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
