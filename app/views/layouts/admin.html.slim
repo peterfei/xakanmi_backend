@@ -105,6 +105,7 @@ html lang="en"
         .container-fluid
           /! BEGIN PAGE HEADER
           =yield
+          =debug(params) if Rails.env.development?
           /! END PAGE CONTENT
         /! END PAGE CONTAINER
       /! END PAGE
@@ -116,6 +117,7 @@ html lang="en"
       .footer-tools
         span.go-top
           i.icon-angle-up
+
     /! END FOOTER
     /! BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time)
     /! BEGIN CORE PLUGINS
