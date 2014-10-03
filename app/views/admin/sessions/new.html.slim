@@ -3,13 +3,18 @@
   #cloud2.cloud
 .logintop
   span 欢迎登录后台管理界面平台
+-flash.each do |k,v|
+  div class="alert.alert-#{k}" 
+    =v
 .loginbody
   span.systemlogo
   .loginbox
-    ul
-      li
-        input.loginuser name="" onclick="" type="text"  
-      li
-        input.loginpwd name="" onclick="" type="text" value="" 
-      li
-        input.loginbtn name="" onclick=""  value="登录"  
+    =simple_form_for(:session,url:admin_sessions_path) do |f|
+      ul
+        li
+          =f.input :email,input_html:{class:"loginuser"},label:false
+        li
+          =f.input :password,input_html:{class:"loginpwd"},label:false
+        li
+          =f.button :submit,class:"loginbtn",value:"登录"
+          / input.loginbtn name="" onclick=""  value="登录"  

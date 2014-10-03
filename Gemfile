@@ -40,4 +40,6 @@ gem 'spring',        group: :development
 gem 'slim-rails'
 gem 'bcrypt-ruby'
 gem 'simple_form'
+gem 'pry'
+gem 'pry-nav'
 
