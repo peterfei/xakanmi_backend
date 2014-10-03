@@ -3,8 +3,9 @@ Rails.application.routes.draw do
     resources :users
     resources :dashboards
     resources :sessions, only: [:new, :create, :destroy]
+    root to: 'admin#dashboards'
   end
-
+  
   #get 'users/new'
 
   
