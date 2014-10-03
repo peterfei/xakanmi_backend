@@ -121,7 +121,7 @@ var App = function () {
                     clearTimeout(resize);
                 }   
                 resize = setTimeout(function() {
-                    console.log('resize');
+                    // console.log('resize');
                     handleResponsive();    
                 }, 50); // wait 50ms until window resize finishes.
             });
@@ -441,7 +441,7 @@ var App = function () {
     }
 
     var handleAccordions = function () {
-        $(".accordion").collapse().height('auto');
+        // $(".accordion").collapse().height('auto');
 
         var lastClicked;
 
@@ -518,7 +518,7 @@ var App = function () {
     }
 
     var handlePopovers = function () {
-        jQuery('.popovers').popover();
+        // jQuery('.popovers').popover();
     }
 
     var handleChoosenSelect = function () {
