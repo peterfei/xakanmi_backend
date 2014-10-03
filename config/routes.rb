@@ -1,14 +1,13 @@
 Rails.application.routes.draw do
   namespace :admin do
     resources :users
-  end
-
-  get 'users/new'
-
-  namespace :admin do
     resources :dashboards
+    resources :sessions, only: [:new, :create, :destroy]
   end
 
+  #get 'users/new'
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
