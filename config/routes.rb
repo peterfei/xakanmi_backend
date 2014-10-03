@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :users
+  end
+
+  get 'users/new'
+
+  namespace :admin do
     resources :dashboards
   end
 
