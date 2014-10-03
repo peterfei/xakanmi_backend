@@ -19,11 +19,6 @@ module Admin::SessionsHelper
     !current_user.nil?
   end
 
-  def destroy
-    sign_out
-    redirect_to root_path
-  end
-
   def sign_out
     current_user.update_attribute(:remember_token,
                                   User.hash(User.new_remember_token))

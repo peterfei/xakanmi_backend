@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     root to: 'admin#dashboards'
   end
   match '/signup',  to: 'users#new',            via: 'get'
-  match '/signin',  to: 'sessions#new',         via: 'get'
-  match '/signout', to: 'sessions#destroy',     via: 'delete'
+  match '/signin',  to: 'admin/sessions#new',         via: 'get'
+  match '/signout', to: 'admin/sessions#destroy',     via: 'delete'
   #get 'users/new'
 
   

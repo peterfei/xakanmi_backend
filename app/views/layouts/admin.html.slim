@@ -30,13 +30,17 @@ html lang="en"
           /! BEGIN RESPONSIVE MENU TOGGLER
           a.btn-navbar.collapsed data-target=".nav-collapse" data-toggle="collapse" href="javascript:;" 
             img alt="" src="#{asset_path('menu-toggler.png')}" /
+
           /! END RESPONSIVE MENU TOGGLER
           /! BEGIN TOP NAVIGATION MENU
           ul.nav.pull-right
-            /! BEGIN USER LOGIN DROPDOWN
+            li#header_task_bar.dropdown
+              =link_to "退出",signout_path, method: "delete"
+              / a.dropdown-toggle data-toggle="dropdown" href="#" 
+              /   i.icon-tasks
             li.dropdown.user
               a.dropdown-toggle data-toggle="dropdown" href="#" 
-                img alt="" src="#{asset_path('avatar1_small.jpg')}" /
+                img alt="" src="#{asset_path('avatar1_small.jpg')}"
                 span.username Bob Nilson
                 i.icon-angle-down
               ul.dropdown-menu
@@ -56,7 +60,6 @@ html lang="en"
                   a href="#" 
                     i.icon-tasks
                     | My Tasks
-                li.divider
                 li
                   a href="extra_lock.html" 
                     i.icon-lock

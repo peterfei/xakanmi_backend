@@ -1,5 +1,7 @@
 class Admin::SessionsController < ApplicationController
   layout 'signinout'
+  skip_before_filter :verify_authenticity_token  
+
   def new
   end
 
@@ -16,6 +18,8 @@ class Admin::SessionsController < ApplicationController
   end
 
   def destroy
+    sign_out
+    redirect_to signin_path
   end
 
 end
