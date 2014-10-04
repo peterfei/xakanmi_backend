@@ -22,7 +22,7 @@ html lang="en"
       .navbar-inner
         .container-fluid
           /! BEGIN LOGO
-          a.brand href="index.html"
+          a.brand href="#"
             p 
               |西安简美网络 
             / img alt="logo" src="#{asset_path('logo.png')}" /
@@ -40,8 +40,8 @@ html lang="en"
               /   i.icon-tasks
             li.dropdown.user
               a.dropdown-toggle data-toggle="dropdown" href="#" 
-                img alt="" src="#{asset_path('avatar1_small.jpg')}"
-                span.username Bob Nilson
+                / img alt="" src="#{asset_path('avatar1_small.jpg')}"
+                span.username=current_user.name
                 i.icon-angle-down
               ul.dropdown-menu
                 li
