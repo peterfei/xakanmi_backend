@@ -35,7 +35,7 @@ html lang="en"
           /! BEGIN TOP NAVIGATION MENU
           ul.nav.pull-right
             li#header_task_bar.dropdown
-              =link_to "退出",signout_path, method: "delete"
+              
               / a.dropdown-toggle data-toggle="dropdown" href="#" 
               /   i.icon-tasks
             li.dropdown.user
@@ -45,29 +45,9 @@ html lang="en"
                 i.icon-angle-down
               ul.dropdown-menu
                 li
-                  a href="extra_profile.html" 
-                    i.icon-user
-                    | My Profile
-                li
-                  a href="page_calendar.html" 
-                    i.icon-calendar
-                    | My Calendar
-                li
-                  a href="inbox.html" 
-                    i.icon-envelope
-                    | My Inbox(3)
-                li
-                  a href="#" 
-                    i.icon-tasks
-                    | My Tasks
-                li
-                  a href="extra_lock.html" 
-                    i.icon-lock
-                    | Lock Screen
-                li
-                  a href="login.html" 
-                    i.icon-key
-                    | Log Out
+                  =link_to signout_path, method: "delete" do
+                    i.icon-key 
+                    |退出
             /! END USER LOGIN DROPDOWN
           /! END TOP NAVIGATION MENU
       /! END TOP NAVIGATION BAR
@@ -128,6 +108,5 @@ html lang="en"
     javascript:
       $(function(){
         App.init();
-
       });
     

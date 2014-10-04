@@ -3,6 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 #= require jquery
 #= require jquery_ujs
+#= require bootstrap.min.js
 #= require jquery-migrate-1.2.1.min.js
 #= require jquery-ui-1.10.1.custom.min.js
 #= require jquery.slimscroll.min.js
