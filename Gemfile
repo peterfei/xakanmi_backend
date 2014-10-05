@@ -42,4 +42,5 @@ gem 'bcrypt-ruby'
 gem 'simple_form'
 gem 'pry'
 gem 'pry-nav'
-
+#add gritter
+gem "gritter", "1.1.0"

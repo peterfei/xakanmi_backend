@@ -11,3 +11,4 @@
 #= require jquery.cookie.min.js
 #= require jquery.uniform.min.js
 #= require app.js
+#= require gritter
