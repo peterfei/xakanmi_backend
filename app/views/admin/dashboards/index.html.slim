@@ -18,40 +18,12 @@
         a href="javascript:;" 
           i.icon-home
           span.title 用户面板
-h3.page-title
-  | Blank Page
-  small blank page
 -content_for :breadcrumb do 
   ul.breadcrumb
     li
       i.icon-home
-      a href="#{admin_dashboards_path}"  Home
+      a href="#{admin_dashboards_path}"  控制面板
       i.icon-angle-right
     /! END PAGE TITLE &amp; BREADCRUMB
 /! END PAGE HEADER
 /! BEGIN PAGE CONTENT
-.row-fluid
-  .span12
-    | Blank page content goes here
-/ = js add_gritter("See my notification")
-
-
-/ h1 Listing admin_dashboards
-
-/ table
-/   thead
-/     tr
-/       th
-/       th
-/       th
-
-/   tbody
-/     - @admin_dashboards.each do |admin_dashboard|
-/       tr
-/         td = link_to 'Show', admin_dashboard
-/         td = link_to 'Edit', edit_admin_dashboard_path(admin_dashboard)
-/         td = link_to 'Destroy', admin_dashboard, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-/ br
-
-/ = link_to 'New Dashboard', new_admin_dashboard_path
