@@ -1,4 +1,4 @@
-class Admin::SessionsController < ApplicationController
+class Admin::SessionsController < AdminController
   layout 'signinout'
   skip_before_filter :verify_authenticity_token  
 

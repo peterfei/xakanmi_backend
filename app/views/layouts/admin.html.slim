@@ -27,6 +27,31 @@ html lang="en"
               |西安简美网络 
             / img alt="logo" src="#{asset_path('logo.png')}" /
           /! END LOGO
+          .navbar.hor-menu.hidden-phone.hidden-tablet
+            .navbar-inner
+              ul.nav
+                li.visible-phone.visible-tablet
+                  /! BEGIN RESPONSIVE QUICK SEARCH FORM
+                  form.sidebar-search
+                    .input-box
+                      a.remove href="javascript:;" 
+                      input placeholder="Search..." type="text" /
+                      input.submit type="button" value=(" ") /
+                  /! END RESPONSIVE QUICK SEARCH FORM
+                li.active
+                  a href="#{admin_dashboards_path}" 
+                    | 主页
+                    span.selected
+                li
+                  a.dropdown-toggle data-toggle="dropdown" href="javascript:;" 
+                    | 用户
+                    span.arrow
+                  ul.dropdown-menu
+                    li
+                      a href="#{admin_users_path}"  用户管理
+                  b.caret-out
+                li
+                  a href=""  Tables
           /! BEGIN RESPONSIVE MENU TOGGLER
           a.btn-navbar.collapsed data-target=".nav-collapse" data-toggle="collapse" href="javascript:;" 
             img alt="" src="#{asset_path('menu-toggler.png')}" /
@@ -54,26 +79,7 @@ html lang="en"
     /! END HEADER
     /! BEGIN CONTAINER
     .page-container.row-fluid
-      /! BEGIN SIDEBAR
-      .page-sidebar.nav-collapse.collapse
-        /! BEGIN SIDEBAR MENU
-        ul.page-sidebar-menu
-          li
-            /! BEGIN SIDEBAR TOGGLER BUTTON
-            .sidebar-toggler.hidden-phone
-            /! BEGIN SIDEBAR TOGGLER BUTTON
-          li
-            /! BEGIN RESPONSIVE QUICK SEARCH FORM
-            form.sidebar-search
-              .input-box
-                a.remove href="javascript:;" 
-                input placeholder="Search..." type="text" /
-                input.submit type="button" value=(" ") /
-            /! END RESPONSIVE QUICK SEARCH FORM
-          li.start.active
-            a href="javascript:;" 
-              i.icon-home
-              span.title 用户面板
+      =yield :sidebar
       /! BEGIN PAGE
       .page-content
         /! BEGIN SAMPLE PORTLET CONFIGURATION MODAL FORM
@@ -87,6 +93,7 @@ html lang="en"
         /! BEGIN PAGE CONTAINER
         .container-fluid
           /! BEGIN PAGE HEADER
+          =yield :breadcrumb
           =yield
           =debug(params) if Rails.env.development?
           /! END PAGE CONTENT

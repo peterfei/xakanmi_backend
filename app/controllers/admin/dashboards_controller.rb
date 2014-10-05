@@ -1,6 +1,6 @@
-class Admin::DashboardsController < ApplicationController
+class Admin::DashboardsController < AdminController
   before_action :set_admin_dashboard, only: [:show, :edit, :update, :destroy]
-  layout 'admin'
+  # layout 'admin'
   
   # GET /admin/dashboards
   # GET /admin/dashboards.json

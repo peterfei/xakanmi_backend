@@ -1,17 +1,33 @@
+-content_for :sidebar do 
+  .page-sidebar.nav-collapse.collapse
+    /! BEGIN SIDEBAR MENU
+    ul.page-sidebar-menu
+      li
+        /! BEGIN SIDEBAR TOGGLER BUTTON
+        .sidebar-toggler.hidden-phone
+        /! BEGIN SIDEBAR TOGGLER BUTTON
+      li
+        /! BEGIN RESPONSIVE QUICK SEARCH FORM
+        form.sidebar-search
+          .input-box
+            a.remove href="javascript:;" 
+            input placeholder="Search..." type="text" /
+            input.submit type="button" value=(" ") /
+        /! END RESPONSIVE QUICK SEARCH FORM
+      li.start.active
+        a href="javascript:;" 
+          i.icon-home
+          span.title 用户面板
 h3.page-title
   | Blank Page
   small blank page
-ul.breadcrumb
-  li
-    i.icon-home
-    a href="index.html"  Home
-    i.icon-angle-right
-  li
-    a href="#"  Layouts
-    i.icon-angle-right
-  li
-    a href="#"  Blank Page
-  /! END PAGE TITLE &amp; BREADCRUMB
+-content_for :breadcrumb do 
+  ul.breadcrumb
+    li
+      i.icon-home
+      a href="#{admin_dashboards_path}"  Home
+      i.icon-angle-right
+    /! END PAGE TITLE &amp; BREADCRUMB
 /! END PAGE HEADER
 /! BEGIN PAGE CONTENT
 .row-fluid

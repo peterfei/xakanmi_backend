@@ -1,10 +1,10 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < AdminController
   before_action :set_admin_user, only: [:show, :edit, :update, :destroy]
-  layout 'admin'
+  # layout 'admin'
   # GET /admin/users
   # GET /admin/users.json
   def index
-    @admin_users = Admin::User.all
+    @admin_users = User.all
   end
 
   # GET /admin/users/1
@@ -14,7 +14,7 @@ class Admin::UsersController < ApplicationController
 
   # GET /admin/users/new
   def new
-    @admin_user = Admin::User.new
+    @admin_user = User.new
   end
 
   # GET /admin/users/1/edit
@@ -24,7 +24,7 @@ class Admin::UsersController < ApplicationController
   # POST /admin/users
   # POST /admin/users.json
   def create
-    @admin_user = Admin::User.new(admin_user_params)
+    @admin_user = User.new(admin_user_params)
 
     respond_to do |format|
       if @admin_user.save

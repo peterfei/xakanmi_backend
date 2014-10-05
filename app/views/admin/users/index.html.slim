@@ -1,3 +1,24 @@
+-content_for :sidebar do 
+  .page-sidebar.nav-collapse.collapse
+    /! BEGIN SIDEBAR MENU
+    ul.page-sidebar-menu
+      li
+        /! BEGIN SIDEBAR TOGGLER BUTTON
+        .sidebar-toggler.hidden-phone
+        /! BEGIN SIDEBAR TOGGLER BUTTON
+      li.start.active
+        a href="javascript:;" 
+          i.icon-home
+          span.title 用户面板
+-content_for :breadcrumb do 
+  ul.breadcrumb
+    li
+      i.icon-home
+      a href="#{admin_dashboards_path}"  Home
+      i.icon-angle-right
+    li
+      a href="#{admin_users_path}" 用户管理
+    /! END PAGE TITLE &amp; BREADCRUMB
 h1 Listing admin_users
 
 table
