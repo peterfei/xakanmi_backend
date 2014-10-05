@@ -1,0 +1,13 @@
+=form_for [:grant_save, @role] do |f|
+  dl
+	-for group, permissions in @permissions.group_by(&:subject)
+	  dt: label
+	  input type="checkbox" data-group=group
+	  = t("sys.permissions.#{group}")
+	- for permission in permissions
+	  dd: label
+	    input[type="checkbox" name="[permissions][]" data-subject=group value=permission.code checked=(@role.granted?(permission.code) ? 'checked' : '')]
+	      = t("sys.permissions.#{permission.code}")
+  .form-actions
+    = f.submit
+    = link_to 'Back', admin_roles_path

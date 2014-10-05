@@ -11,9 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141003110746) do
+ActiveRecord::Schema.define(version: 20141005145631) do
 
   create_table "admin_dashboards", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_permissions", force: true do |t|
+    t.string   "code"
+    t.string   "subject"
+    t.string   "action"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_roles", force: true do |t|
+    t.string   "name"
+    t.text     "permissions"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_user_roles", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "role_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -25,6 +47,7 @@ ActiveRecord::Schema.define(version: 20141003110746) do
     t.datetime "updated_at"
     t.string   "password_digest"
     t.string   "remember_token"
+    t.text     "permissions"
   end
 
   add_index "users", ["remember_token"], name: "index_users_on_remember_token"

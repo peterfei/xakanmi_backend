@@ -1,0 +1,26 @@
+h1 Listing admin_permissions
+
+table
+  thead
+    tr
+      th Code
+      th Subject
+      th Action
+      th
+      th
+      th
+
+  tbody
+    - @admin_permissions.each do |admin_permission|
+      tr
+        td = admin_permission.code
+        td = admin_permission.subject
+        td = admin_permission.action
+        td = link_to 'Show', admin_permission
+        td = link_to 'Edit', edit_admin_permission_path(admin_permission)
+
+        td = link_to 'Destroy', admin_permission, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Permission', new_admin_permission_path

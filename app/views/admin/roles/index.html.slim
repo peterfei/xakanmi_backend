@@ -1,0 +1,26 @@
+=render 'admin/users/bar'
+h1 Listing admin_roles
+
+table
+  thead
+    tr
+      th Name
+      th Permissions
+      th
+      th
+      th
+
+  tbody
+    - @admin_roles.each do |admin_role|
+      tr
+        td = admin_role.name
+        td = admin_role.permissions
+        td = link_to 'Show', admin_role
+        td = link_to 'Edit', edit_admin_role_path(admin_role)
+        td = link_to '授权', grant_admin_role_path(admin_role), class: 'btn blue'
+
+        td = link_to 'Destroy', admin_role, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Role', new_admin_role_path

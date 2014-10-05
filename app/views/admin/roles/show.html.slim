@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @admin_role.name
+p
+  strong Permissions:
+  
+  = render_permissions(@admin_role.permissions)
+
+= link_to 'Edit', edit_admin_role_path(@admin_role)
+'|
+= link_to 'Back', admin_roles_path

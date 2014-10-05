@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Code:
+  = @admin_permission.code
+p
+  strong Subject:
+  = @admin_permission.subject
+p
+  strong Action:
+  = @admin_permission.action
+
+= link_to 'Edit', edit_admin_permission_path(@admin_permission)
+'|
+= link_to 'Back', admin_permissions_path

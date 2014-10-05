@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
   namespace :admin do
+    resources :user_roles
+  end
+
+  namespace :admin do
+    resources :permissions
+  end
+
+  namespace :admin do
+    resources :roles do 
+      member do
+        get 'grant'
+        patch 'grant_save'
+      end
+    end
+  end
+
+  namespace :admin do
     resources :users
     resources :dashboards
     resources :sessions, only: [:new, :create, :destroy]
