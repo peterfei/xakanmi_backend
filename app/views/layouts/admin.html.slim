@@ -11,8 +11,9 @@ html lang="en"
     meta content="width=device-width, initial-scale=1.0" name="viewport" /
     /! BEGIN GLOBAL MANDATORY STYLES
     = stylesheet_link_tag    'admin/dashboards'  
-    = javascript_include_tag 'application'
+    = javascript_include_tag 'admin/dashboards'
     = gflash
+    = yield :script
   /! END HEAD
   /! BEGIN BODY
   body.page-header-fixed.page-sidebar-fixed.page-footer-fixed.page-sidebar-closed
@@ -94,7 +95,7 @@ html lang="en"
           /! BEGIN PAGE HEADER
           =yield :breadcrumb
           =yield
-          =debug(params) if Rails.env.development?
+          / =debug(params) if Rails.env.development?
           /! END PAGE CONTENT
         /! END PAGE CONTAINER
       /! END PAGE
@@ -114,5 +115,6 @@ html lang="en"
     javascript:
       $(function(){
         App.init();
+        
       });
     

@@ -1,4 +1,7 @@
 =render :partial=>"bar"
+-content_for :script do 
+  script src="/assets/select2.min.js"
+  script src="/assets/jquery.dataTables.js"
 -content_for :breadcrumb do 
   ul.breadcrumb
     li
@@ -8,23 +11,102 @@
     li
       a href="#{admin_users_path}" 用户管理
     /! END PAGE TITLE &amp; BREADCRUMB
-table
-  thead
-    tr
-      th  用户名
-      th  邮箱
-      th
+  .portlet.box.blue
+    .portlet-title
+      .caption
+        i.icon-globe
+        | 用户管理
+      .tools
+        a.collapse href="javascript:;" 
+        / a.config data-toggle="modal" href="#portlet-config" 
+        / a.reload href="javascript:;" 
+        / a.remove href="javascript:;" 
+    .portlet-body
+      .clearfix
+        .btn-group
+          =link_to  new_admin_user_path  do 
+            button#sample_editable_1_new.btn.green 新增用户
+            i.icon-plus
+        / .btn-group.pull-right
+        /   button.btn.dropdown-toggle data-toggle="dropdown" 
+        /     | 工具
+        /     i.icon-angle-down
+        /   ul.dropdown-menu.pull-right
+        /     li
+        /       a href="#"  
+        /     li
+        /       a href="#"  Save as PDF
+        /     li
+        /       a href="#"  Export to Excel
+      #sample_1_wrapper.dataTables_wrapper.form-inline role="grid" 
+        .row-fluid
+          .span6
+            #sample_1_filter.dataTables_filter
+              label
+                | 查询:
+                input.m-wrap.medium aria-controls="sample_1" type="text" /
+        table#sample_1.table.table-striped.table-bordered.table-hover.dataTable aria-describedby="sample_1_info" 
+          thead
+            tr role="row" 
+              th.sorting_disabled aria-label="" colspan="1" role="columnheader" rowspan="1" style=("width: 24px;") 
+                div
+                  span.checked
+                    input.group-checkable data-set=("#sample_1 .checkboxes") type="checkbox" /
+              th colspan="1" role="columnheader" rowspan="1" style=("width: 153px;") tabindex="0"  用户名
+              th colspan="1" role="columnheader" rowspan="1" style=("width: 295px;")  邮箱
+              th 操作
+          tbody aria-live="polite" aria-relevant="all" role="alert" 
+            - @admin_users.each do |admin_user|
+              tr.gradeX.odd
+                td.sorting_1
+                  div
+                    span.checked
+                      input.checkboxes checked="checked" type="checkbox" value="1" /
+                td=admin_user.name
+                td.hidden-480
+                  a href="mailto:#{admin_user.email}"  =admin_user.email
+                
+                td
+                  span.input-group-btn-group 
+                    = link_to admin_user_path(admin_user)  do 
+                      button.btn.blue 显示
+                    = link_to  edit_admin_user_path(admin_user) do 
+                      button.btn.blue 编辑
+            / tr.gradeX.even
+            /   td.sorting_1
+            /     div
+            /       span.checked
+            /         input.checkboxes checked="checked" type="checkbox" value="1" /
+            /   td looper
+            /   td.hidden-480
+            /     a href="mailto:looper90@gmail.com"  looper90@gmail.com
+            /   td.hidden-480 120
+            /   td.center.hidden-480 12.12.2011
+            /   td
+            /     span.label.label-warning Suspended
+        / .row-fluid
+        /   .span6
+        /     #sample_1_info.dataTables_info Showing 1 to 5 of 25 entries
+        /   .span6
+        /     .dataTables_paginate.paging_bootstrap.pagination
+        /       ul
+        /         li.prev.disabled
+        /           a href="#" 
+        /             | ←
+        /             span.hidden-480 Prev
+        /         li.active
+        /           a href="#"  1
+        /         li
+        /           a href="#"  2
+        /         li
+        /           a href="#"  3
+        /         li
+        /           a href="#"  4
+        /         li
+        /           a href="#"  5
+        /         li.next
+        /           a href="#" 
+        /             span.hidden-480 Next
+        /             | →
+  /! END EXAMPLE TABLE PORTLET
 
-  tbody
-    - @admin_users.each do |admin_user|
-      tr 
-        td=admin_user.name
-        td=admin_user.email
-      
-        td = link_to '显示', admin_user_path(admin_user)
-        = link_to '编辑', edit_admin_user_path(admin_user)
-        /    = link_to 'Destroy', admin_user, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-br
-
-= link_to '新建用户', new_admin_user_path
