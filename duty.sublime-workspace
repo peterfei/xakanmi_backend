@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"admin",
+				"admin_users_path"
+			],
+			[
+				"user",
+				"user_roles"
+			],
+			[
+				"lo",
+				"loginuser"
+			],
+			[
+				"ass",
+				"asset_path"
+			],
+			[
 				"ima",
 				"image_path"
 			],
@@ -15,13 +31,73 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/views/admin/users/grant.html.slim",
+			"settings":
+			{
+				"buffer_size": 1123,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/roles/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 2961,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/roles/grant.html.slim",
+			"settings":
+			{
+				"buffer_size": 1349,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/admin/users/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 4186,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/admin/users_controller.rb",
+			"settings":
+			{
+				"buffer_size": 2782,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1504,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 147.0,
 		"selected_items":
 		[
+			[
+				"git:add",
+				"Git: Add..."
+			],
+			[
+				"git:comm",
+				"Git: Commit"
+			],
+			[
+				"git",
+				"Git: Commit"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -51,20 +127,8 @@
 				"Preferences: Alignment File Settings – User"
 			],
 			[
-				"git",
-				"Git: Custom Command"
-			],
-			[
-				"git:comm",
-				"Git: Amend Commit"
-			],
-			[
 				"gitco",
 				"Git: Commit"
-			],
-			[
-				"git:add",
-				"Git: Add Current File"
 			],
 			[
 				"goto",
@@ -113,10 +177,115 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/liufei/ROR/duty"
+		"/Users/liufei/ROR/duty",
+		"/Users/liufei/ROR/duty/app",
+		"/Users/liufei/ROR/duty/app/assets",
+		"/Users/liufei/ROR/duty/app/assets/javascripts",
+		"/Users/liufei/ROR/duty/app/assets/javascripts/admin",
+		"/Users/liufei/ROR/duty/app/assets/stylesheets",
+		"/Users/liufei/ROR/duty/app/assets/stylesheets/admin",
+		"/Users/liufei/ROR/duty/app/controllers",
+		"/Users/liufei/ROR/duty/app/controllers/admin",
+		"/Users/liufei/ROR/duty/app/controllers/concerns",
+		"/Users/liufei/ROR/duty/app/helpers",
+		"/Users/liufei/ROR/duty/app/helpers/admin",
+		"/Users/liufei/ROR/duty/app/models",
+		"/Users/liufei/ROR/duty/app/models/admin",
+		"/Users/liufei/ROR/duty/app/models/concerns",
+		"/Users/liufei/ROR/duty/app/views",
+		"/Users/liufei/ROR/duty/app/views/admin",
+		"/Users/liufei/ROR/duty/app/views/admin/dashboards",
+		"/Users/liufei/ROR/duty/app/views/admin/permissions",
+		"/Users/liufei/ROR/duty/app/views/admin/roles",
+		"/Users/liufei/ROR/duty/app/views/admin/sessions",
+		"/Users/liufei/ROR/duty/app/views/admin/users",
+		"/Users/liufei/ROR/duty/app/views/layouts",
+		"/Users/liufei/ROR/duty/app/views/users",
+		"/Users/liufei/ROR/duty/db",
+		"/Users/liufei/ROR/duty/vendor",
+		"/Users/liufei/ROR/duty/vendor/assets"
 	],
 	"file_history":
 	[
+		"/Users/liufei/ROR/duty/app/models/admin/user_role.rb",
+		"/Users/liufei/ROR/duty/app/models/user.rb",
+		"/Users/liufei/ROR/duty/app/models/admin/user.rb",
+		"/Users/liufei/ROR/duty/app/views/admin/users/_bar.html.slim",
+		"/Users/liufei/ROR/duty/app/views/admin/permissions/index.html.slim",
+		"/Users/liufei/ROR/duty/app/views/admin/users/index.html.slim",
+		"/Users/liufei/ROR/duty/Gemfile",
+		"/Users/liufei/ROR/duty/config/routes.rb",
+		"/Users/liufei/ROR/duty/app/views/admin/users/_form.html.slim",
+		"/Users/liufei/ROR/duty/app/controllers/users_controller.rb",
+		"/Users/liufei/ROR/duty/app/controllers/admin/roles_controller.rb",
+		"/Users/liufei/ROR/duty/db/seeds.rb",
+		"/Users/liufei/ROR/duty/app/models/admin/permission.rb",
+		"/Users/liufei/ROR/duty/app/views/admin/roles/index.html.slim",
+		"/Users/liufei/ROR/duty/app/views/admin/roles/show.html.slim",
+		"/Users/liufei/ROR/duty/app/helpers/application_helper.rb",
+		"/Users/liufei/ROR/duty/app/assets/javascripts/admin/roles.js.coffee",
+		"/Users/liufei/ROR/duty/app/views/admin/roles/grant.html.slim",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/style.css",
+		"/Users/liufei/ROR/duty/app/views/layouts/admin.html.slim",
+		"/Users/liufei/ROR/duty/config/initializers/assets.rb",
+		"/Users/liufei/ROR/duty/app/helpers/admin/sessions_helper.rb",
+		"/Users/liufei/ROR/duty/app/models/ability.rb",
+		"/Users/liufei/ROR/duty/app/models/admin/role.rb",
+		"/Users/liufei/ROR/duty/app/assets/images/glyphicons-regular.svg",
+		"/Users/liufei/ROR/duty/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/liufei/ROR/duty/db/migrate/20141005145631_create_admin_user_roles.rb",
+		"/Users/liufei/ROR/duty/app/views/layouts/signinout.html.slim",
+		"/Users/liufei/ROR/duty/app/views/admin/dashboards/index.html.slim",
+		"/Users/liufei/ROR/duty/app/views/admin/sessions/new.html.slim",
+		"/Users/liufei/ROR/duty/app/views/admin/users/new.html.slim",
+		"/Users/liufei/ROR/duty/app/controllers/admin_controller.rb",
+		"/Users/liufei/ROR/duty/app/controllers/admin/dashboards_controller.rb",
+		"/Users/liufei/ROR/duty/app/controllers/admin/sessions_controller.rb",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/uniform.default.css",
+		"/Users/liufei/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/liufei/ROR/duty/app/assets/stylesheets/admin/dashboards.css",
+		"/Users/liufei/ROR/duty/app/controllers/admin/users_controller.rb",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/blue.css",
+		"/Users/liufei/ROR/duty/app/views/users/index.html.slim",
+		"/Users/liufei/ROR/duty/app/views/users/index.html",
+		"/Users/liufei/ROR/duty/app/helpers/admin/dashboards_helper.rb",
+		"/Users/liufei/ROR/duty/app/helpers/admin/users_helper.rb",
+		"/Users/liufei/ROR/duty/app/assets/javascripts/admin/dashboards.js.coffee",
+		"/Users/liufei/ROR/duty/vendor/assets/javascripts/app.js",
+		"/Users/liufei/ROR/duty/app/assets/stylesheets/signinout.css",
+		"/Users/liufei/ROR/duty/app/assets/javascripts/cloud.js",
+		"/Users/liufei/ROR/duty/app/controllers/application_controller.rb",
+		"/Users/liufei/ROR/duty/app/views/layouts/application.html.erb",
+		"/Users/liufei/ROR/duty/app/helpers/users_helper.rb",
+		"/Users/liufei/ROR/duty/test/test_helper.rb",
+		"/Users/liufei/ROR/duty/test/helpers/.keep",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/halflings.css",
+		"/Users/liufei/ROR/duty/config/secrets.yml",
+		"/Users/liufei/ROR/duty/config.ru",
+		"/Users/liufei/ROR/duty/vendor/assets/javascripts/contact-us.js",
+		"/Users/liufei/ROR/duty/db/migrate/20141003110746_add_remember_token_to_users.rb",
+		"/Users/liufei/ROR/duty/vendor/assets/javascripts/lock.js",
+		"/Users/liufei/ROR/duty/vendor/assets/javascripts/load-image.min.js",
+		"/Users/liufei/ROR/duty/lib/assets/.keep",
+		"/Users/liufei/ROR/duty/duty.sublime-project",
+		"/Users/liufei/ROR/duty/config/initializers/filter_parameter_logging.rb",
+		"/Users/liufei/ROR/duty/app/assets/images/glyphiconshalflings-regular.svg",
+		"/Users/liufei/ROR/duty/app/assets/images/glyphicons_halflings.svg",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/multi-select-metro.css",
+		"/Users/liufei/ROR/duty/config/initializers/session_store.rb",
+		"/Users/liufei/ROR/duty/config/environments/test.rb",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/bootstrap-toggle-buttons.css",
+		"/Users/liufei/ROR/duty/db/migrate/20141003063107_add_password_digest_to_users.rb",
+		"/Users/liufei/ROR/duty/app/models/admin.rb",
+		"/Users/liufei/ROR/duty/db/migrate/20141002112229_create_admin_dashboards.rb",
+		"/Users/liufei/ROR/duty/bin/bundle",
+		"/Users/liufei/ROR/duty/config/initializers/backtrace_silencers.rb",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/default.css",
+		"/Users/liufei/ROR/duty/config/application.rb",
+		"/Users/liufei/ROR/duty/db/development.sqlite3",
+		"/Users/liufei/ROR/duty/vendor/assets/stylesheets/font-awesome.min.css",
+		"/Users/liufei/ROR/duty/app/assets/stylesheets/admin/dashboards.css.scss",
+		"/Users/liufei/ROR/duty/Rakefile",
 		"/Users/liufei/ROR/octopress/source/_posts/2014-09-27-mac-sublime3.markdown",
 		"/Users/liufei/ROR/octopress/source/_includes/head.html",
 		"/Users/liufei/ROR/octopress/source/_posts/2014-09-25-php-magento-productions.markdown",
@@ -165,90 +334,11 @@
 		"/Users/liufei/ROR/diaspora/config/database.yml",
 		"/Users/liufei/ROR/diaspora/Gemfile",
 		"/Users/liufei/ROR/diaspora/features/step_definitions/user_steps.rb",
-		"/Users/liufei/ROR/diaspora/config/unicorn.rb",
-		"/Users/liufei/ROR/diaspora/script/server",
-		"/Users/liufei/ROR/diaspora/config/initializers/set_up_image_redirects.rb",
-		"/Users/liufei/ROR/diaspora/features/desktop/signs_up.feature",
-		"/Users/liufei/ROR/diaspora/app/assets/javascripts/app/views/single-post-viewer/single_post_interactions.js",
-		"/Users/liufei/ROR/diaspora/app/views/notifier/single_admin.markerb",
-		"/Users/liufei/ROR/diaspora/app/assets/stylesheets/new_styles/_login.scss",
-		"/Users/liufei/ROR/diaspora/features/desktop/logs_in_and_out.feature",
-		"/Users/liufei/ROR/diaspora/features/desktop/logged_out_browsing.feature",
-		"/Users/liufei/ROR/diaspora/app/models/like.rb",
-		"/Users/liufei/ROR/diaspora/app/assets/javascripts/view.js",
-		"/Users/liufei/ROR/diaspora/config/locales/diaspora/vi.yml",
-		"/Users/liufei/ROR/diaspora/app/views/publics/webfinger.erb",
-		"/Users/liufei/ROR/diaspora/app/views/notifier/liked.markerb",
-		"/Users/liufei/ROR/diaspora/spec/javascripts/app/views/location_view_spec.js",
-		"/Users/liufei/ROR/diaspora/app/views/tags/_followed_tags_listings.haml",
-		"/Users/liufei/Downloads/metronic.bootstrap/media/css/font-awesome.css",
-		"/Users/liufei/ROR/patient/config/routes.rb",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/glyphicons.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/halflings.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/inbox.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/jquery.fancybox.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/jquery.fileupload-ui.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/jquery.gritter.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/lock.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/login-soft.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/coming-soon.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/default.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/dropzone.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/DT_bootstrap.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/font-awesome.css",
-		"/Users/liufei/ROR/patient/app/views/home/index.html.slim",
-		"/Users/liufei/ROR/patient/app/views/layouts/application.html.erb",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/font-awesome.min.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/colorpicker.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/multi-select-metro.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/profile.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/search.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/select2_metro.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/style-metro.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/style.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/uniform.default.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/bootstrap-tree.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/chosen.css",
-		"/Users/liufei/ROR/patient/app/assets/stylesheets/bootstrap.min.css",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/07110a3d50cf2e40114c540e262c8cbb",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/10328cb5f1c915eef4e2466708a9410a",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/12e81ec3aacb924e7ea211c3440a3b02",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/1450c8f5d2b6e201d72fa175586bbd97",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/18cc98678b24c7adf3eba9cd8b0287cb",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/195b0c0ece1db236806e2ec2310f1479",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/1b77abb6bee52fa8d68ee7e81077ff20",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/21ffda50610d962dad20e7c69d7adb2e",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/24c28286dda1b6064aaa9ab51dd1abe3",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/25c7d30ca5ab02f253a706278d371884",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/29967ed4c0b78f022c40f98dd6ebf155",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/2d373d1a39cf301201ddd44fe1803925",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/357970feca3ac29060c1e3861e2c0953",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/374d7489826341abf7436c148604943d",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/378ae42fa633d06f58f9e76b1e0424a4",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3b670c9fa3a25f962fb8152bcfe0b342",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3bc444b62afe81fc6f16b4ac8a63d04c",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3e773e8984a02eb242ac92342b3653ae",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/3fd9412156bcbb7ffb2768b082b02759",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/4666c1fbc8fb1de0fe46806406437ba3",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/48ccee950cbfd3708d4bc1a24c493e94",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/496f8473d1d5109599b865189c6216d0",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/49a885d3e06fe33a5c64f07b6313daeb",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/4d6e5dfee80a447fd4640be5755bf528",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/4ea33e825e6e38bd22dccab488a0255b",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/542c740f339d1e8da9da64cc19145929",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/551fa768f4d5776fab14a3b270c4d064",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/555352f27fae8d78fc8d68b2572bdf6b",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/5730afc0d151dd1e10e88b7b3e6adbc1",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/598b5c2796e2bea02c34549c8f4eaccd",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/615bc5069da99c4d28be81e434712369",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/63b0a666b5b5c3be731db8ff04101b53",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/69b24dd2e7d902197e380e7e344499e1",
-		"/Users/liufei/ROR/patient/tmp/cache/assets/development/sprockets/69df01e143382e29baa23c1019faf7e7"
+		"/Users/liufei/ROR/diaspora/config/unicorn.rb"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
@@ -264,6 +354,44 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"admin_user",
+			"pry",
+			"match",
+			"= f.input :roles do |rf|\n    - @roles.each do |role|\n      label.checkbox.inline\n        = check_box_tag 'user[user_roles_attributes][][role_id]', role.id, @admin_user.roles.include?(role)\n        = role.name",
+			"grant",
+			"class_name",
+			"../image/",
+			".row-fluid\n        /   .span6\n        /     #sample_1_info.dataTables_info Showing 1 to 5 of 25 entries\n        /   .span6\n        /     .dataTables_paginate.paging_bootstrap.pagination\n        /       ul\n        /         li.prev.disabled\n        /           a href=\"#\" \n        /             | ←\n        /             span.hidden-480 Prev\n        /         li.active\n        /           a href=\"#\"  1\n        /         li\n        /           a href=\"#\"  2\n        /         li\n        /           a href=\"#\"  3\n        /         li\n        /           a href=\"#\"  4\n        /         li\n        /           a href=\"#\"  5\n        /         li.next\n        /           a href=\"#\" \n        /             span.hidden-480 Next\n        /             | →",
+			"span",
+			"用户",
+			"sorting_1",
+			".checker",
+			"../image/",
+			"gritter-blue",
+			"../../img/",
+			"url(../../img",
+			"url(../../img/",
+			"url(\"../../img/",
+			"..\\/..\\/img\\/",
+			"../../img/",
+			"Admin::",
+			"h3",
+			"gritter",
+			"gritter-without-image",
+			"bootstrap",
+			"\"\",\"\"",
+			"dropdown",
+			"url(../images",
+			"../images/",
+			"../images",
+			"page",
+			"search-icon",
+			"search-ico",
+			"search-icon",
+			"sidebar",
+			"user",
+			"    \n",
+			"metro",
 			"|",
 			"peterfei",
 			"simple_search",
@@ -309,12 +437,16 @@
 			"user",
 			", "
 		],
-		"highlight": true,
+		"highlight": false,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"",
+			"url(/assets",
+			"url(assets",
+			"assets",
 			"###",
 			"####",
 			"##",
@@ -330,8 +462,546 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/views/admin/users/grant.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1123,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1094,
+								1123
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"open_with_edit": true,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 41.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/admin/roles/index.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2961,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2342,
+								2357
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 778.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/views/admin/roles/grant.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1349,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1197,
+								1197
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 212.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/admin/users/index.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4186,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2868,
+								2912
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1088.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/admin/users_controller.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2782,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2110,
+								2116
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1189.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1504,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1436,
+								1443
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 364.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -377,7 +1047,7 @@
 	"project": "duty.sublime-project",
 	"replace":
 	{
-		"height": 50.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -386,16 +1056,84 @@
 		"selected_items":
 		[
 			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"gran",
+				"app/views/admin/roles/grant.html.slim"
+			],
+			[
+				"role",
+				"app/models/admin/role.rb"
+			],
+			[
+				"style.",
+				"vendor/assets/stylesheets/style.css"
+			],
+			[
+				"ass",
+				"config/initializers/assets.rb"
+			],
+			[
+				"",
+				"app/controllers/admin/sessions_controller.rb"
+			],
+			[
+				"help",
+				"app/helpers/users_helper.rb"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"app",
+				"vendor/assets/javascripts/app.js"
+			],
+			[
+				"route",
+				"config/routes.rb"
+			],
+			[
+				"contr",
+				"app/controllers/admin/sessions_controller.rb"
+			],
+			[
+				"session/",
+				"app/views/admin/sessions/new.html.slim"
+			],
+			[
+				"si",
+				"app/views/layouts/signinout.html.slim"
+			],
+			[
+				"admin",
+				"app/views/layouts/admin.html.slim"
+			],
+			[
+				"bun",
+				"bin/bundle"
+			],
+			[
+				"defa",
+				"vendor/assets/stylesheets/default.css"
+			],
+			[
 				"foo",
 				"app/views/layouts/_footer.html.haml"
 			],
 			[
 				"application",
 				"app/views/layouts/application.html.haml"
-			],
-			[
-				"user",
-				"app/models/user.rb"
 			],
 			[
 				"index_1143",

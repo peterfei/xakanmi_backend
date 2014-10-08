@@ -47,3 +47,5 @@ gem "gritter", "1.1.0"
 #用户权限
 gem "cancan"
 
+# gem 'protected_attributes'
+

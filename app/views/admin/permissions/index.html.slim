@@ -1,3 +1,16 @@
+=render 'admin/users/bar'
+-content_for :breadcrumb do 
+  ul.breadcrumb
+    li
+      i.icon-home
+      a href="#{admin_dashboards_path}"  控制面板 
+      i.icon-angle-right
+    li
+      a href="#{admin_users_path}" 用户管理
+      i.icon-angle-right
+    li
+      a href="#{grant_admin_user_path}" 用户组授权
+    /! END PAGE TITLE &amp; BREADCRUMB
 h1 Listing admin_permissions
 
 table

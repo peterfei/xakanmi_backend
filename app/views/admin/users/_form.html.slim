@@ -1,9 +1,17 @@
-= form_for @admin_user do |f|
+=simple_form_for @admin_user do |f|
   - if @admin_user.errors.any?
     #error_explanation
       h2 = "#{pluralize(@admin_user.errors.count, "error")} prohibited this admin_user from being saved:"
       ul
         - @admin_user.errors.full_messages.each do |message|
           li = message
+  =f.input :email ,as: :email
+  =f.input :password, as: :password
+  / = f.input :roles do |rf|
+  /   - @roles.each do |role|
+  /     label.checkbox.inline
+  /       = check_box_tag 'user[user_roles_attributes][][role_id]', role.id, @admin_user.roles.include?(role)
+  /       = role.name
+
 
   .actions = f.submit 'Save'

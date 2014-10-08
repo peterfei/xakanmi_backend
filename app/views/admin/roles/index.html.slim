@@ -1,26 +1,87 @@
 =render 'admin/users/bar'
-h1 Listing admin_roles
+-content_for :breadcrumb do 
+  ul.breadcrumb
+    li
+      i.icon-home
+      a href="#{admin_dashboards_path}"  控制面板 
+      i.icon-angle-right
+    li
+      a href="#{admin_users_path}" 用户管理
+      i.icon-angle-right
+    li
+      a href="#{admin_roles_path}" 权限管理
+    /! END PAGE TITLE &amp; BREADCRUMB
+  .portlet.box.blue
+    .portlet-title
+      .caption
+        i.icon-globe
+        | 权限管理列表
+      .tools
+        a.collapse href="javascript:;" 
+        / a.config data-toggle="modal" href="#portlet-config" 
+        / a.reload href="javascript:;" 
+        / a.remove href="javascript:;" 
+    .portlet-body
+      .clearfix
+        .btn-group
+          =link_to  new_admin_role_path  do 
+            button#sample_editable_1_new.btn.green 新增用户角色
+            i.icon-plus
+      #sample_1_wrapper.dataTables_wrapper.form-inline role="grid" 
+        .row-fluid
+          .span6
+            #sample_1_filter.dataTables_filter
+              label
+                | 查询:
+                input.m-wrap.medium aria-controls="sample_1" type="text" /
+        table#sample_1.table.table-striped.table-bordered.table-hover.dataTable aria-describedby="sample_1_info" 
+          thead
+            tr role="row" 
+              
+              th colspan="1" role="columnheader" rowspan="1" style=("width: 153px;") tabindex="0"  用户组
+              th colspan="1" role="columnheader" rowspan="1" style=("width: 295px;")  授权
+              th 操作
+          tbody aria-live="polite" aria-relevant="all" role="alert"
+            - @admin_roles.each do |admin_role|
+              tr.gradeX.odd
+                / td.sorting_1
+                /     div
+                /       span.checked
+                /         input.checkboxes checked="checked" type="checkbox" value="1" /
+                td = admin_role.name
+                td.hidden-480 = admin_role.permissions
+                td
+                  .btn-group
+                    = link_to  admin_role  do 
+                      button.btn.blue 显示
+                    = link_to  edit_admin_role_path(admin_role) do 
+                      button.btn.blue 编辑
+                    = link_to  grant_admin_role_path(admin_role) do 
+                      button.btn.blue 访问授权
+                    = link_to  admin_role, data: {:confirm => '确定要删除吗?'}, :method => :delete  do 
+                      button.btn.blue 删除
+/ h1 Listing admin_roles
 
-table
-  thead
-    tr
-      th Name
-      th Permissions
-      th
-      th
-      th
+/ table
+/   thead
+/     tr
+/       th Name
+/       th Permissions
+/       th
+/       th
+/       th
 
-  tbody
-    - @admin_roles.each do |admin_role|
-      tr
-        td = admin_role.name
-        td = admin_role.permissions
-        td = link_to 'Show', admin_role
-        td = link_to 'Edit', edit_admin_role_path(admin_role)
-        td = link_to '授权', grant_admin_role_path(admin_role), class: 'btn blue'
+/   tbody
+/     - @admin_roles.each do |admin_role|
+/       tr
+/         td = admin_role.name
+/         td = admin_role.permissions
+/         td = link_to 'Show', admin_role
+/         td = link_to 'Edit', edit_admin_role_path(admin_role)
+/         td = link_to '授权', grant_admin_role_path(admin_role), class: 'btn blue'
 
-        td = link_to 'Destroy', admin_role, data: {:confirm => 'Are you sure?'}, :method => :delete
+/         td = link_to 'Destroy', admin_role, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
+/ br
 
-= link_to 'New Role', new_admin_role_path
+/ = link_to 'New Role', new_admin_role_path

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 puts 'Installing permissions...'
 permissions = {}
-models = %w(Role)
+models = %w(Role User )
 base_actions = %w(read create update destroy)
 models.each { |model| permissions[model] = base_actions }
 puts "  Deleting pevious permissions..."

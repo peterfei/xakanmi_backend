@@ -3,6 +3,8 @@ class Admin::UsersController < AdminController
   # layout 'admin'
   # GET /admin/users
   # GET /admin/users.json
+  before_action :set_roles
+
   def index
     @admin_users = User.all
   end
@@ -41,6 +43,7 @@ class Admin::UsersController < AdminController
   # PATCH/PUT /admin/users/1.json
   def update
     respond_to do |format|
+
       if @admin_user.update(admin_user_params)
         format.html { redirect_to @admin_user, notice: 'User was successfully updated.' }
         format.json { render :show, status: :ok, location: @admin_user }
@@ -61,7 +64,34 @@ class Admin::UsersController < AdminController
     end
   end
 
+  def grant 
+     @admin_user = Admin::User.find(params[:id])
+     
+     if   request.post?
+        # binding.pry
+        # FIXME 清除之前的role数据
+        # binding.pry 
+      @admin_user.user_roles.destroy_all
+      if params[:admin_user]
+        # @admin_user.user_roles.destroy_all
+        @admin_user.user_roles_attributes= admin_user_params[:user_roles_attributes]
+        @admin_user.save(validate:false)
+
+        
+      end
+      gflash :now,:success => "#{@admin_user.name}授权成功",
+                  :notice => { :value => "恭喜您", :sticky => true }
+      redirect_to admin_users_path
+
+     end
+     
+  end
+
   private
+      def set_roles
+        @roles = Admin::Role.all
+      end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_user
       @admin_user = User.find(params[:id])
@@ -69,6 +99,8 @@ class Admin::UsersController < AdminController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_user_params
-      params[:admin_user]
+      # params[:admin_user]
+      # binding.pry
+      params.require(:admin_user).permit(:email,:password,:name,user_roles_attributes: [:role_id])
     end
 end

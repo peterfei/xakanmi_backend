@@ -17,7 +17,12 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :users
+    resources :users do
+      member do
+        get 'grant' 
+        post 'grant'
+      end 
+    end
     resources :dashboards
     resources :sessions, only: [:new, :create, :destroy]
     root to: 'admin#dashboards'

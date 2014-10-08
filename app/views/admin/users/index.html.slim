@@ -67,11 +67,13 @@
                   a href="mailto:#{admin_user.email}"  =admin_user.email
                 
                 td
-                  span.input-group-btn-group 
+                  .btn-group 
                     = link_to admin_user_path(admin_user)  do 
                       button.btn.blue 显示
                     = link_to  edit_admin_user_path(admin_user) do 
                       button.btn.blue 编辑
+                    = link_to  grant_admin_user_path(admin_user) do 
+                      button.btn.blue 授权
             / tr.gradeX.even
             /   td.sorting_1
             /     div

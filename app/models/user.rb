@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
   before_save { self.email = email.downcase }
   has_many :user_roles,class_name:"Admin::UserRole"
   has_many :roles, through: :user_roles,class_name:"Admin::Role"
+  accepts_nested_attributes_for :user_roles, allow_destroy: true
   after_save :grant_permissions
   
   def admin?
@@ -23,6 +24,12 @@ class User < ActiveRecord::Base
   # def User.hash(token)
   #   Digest::SHA1.hexdigest(token.to_s)
   # end
+  def grant_permissions
+    logger.info "Granting user permission after user changed..."
+    permissions = roles.map { |role| role.permissions.split(',') }.flatten.uniq.join(',')
+    logger.info "Permission to grant: #{permissions}"
+    update_column(:permissions, permissions)
+  end
 private
 
   def create_remember_token
@@ -31,11 +38,6 @@ private
 	 self.remember_token = User.hash(User.new_remember_token)
   end
 
-  def grant_permissions
-    logger.info "Granting user permission after user changed..."
-    permissions = roles.map { |role| role.permissions.split(',') }.flatten.uniq.join(',')
-    logger.info "Permission to grant: #{permissions}"
-    update_column(:permissions, permissions)
-  end
+  
 
 end

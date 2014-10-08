@@ -1,0 +1,34 @@
+=render 'bar'
+-content_for :breadcrumb do 
+  ul.breadcrumb
+    li
+      i.icon-home
+      a href="#{admin_dashboards_path}"  控制面板 
+      i.icon-angle-right
+    li
+      a href="#{admin_users_path}" 用户管理
+      i.icon-angle-right
+    li
+      a href="#{grant_admin_user_path}" 用户组授权
+    /! END PAGE TITLE &amp; BREADCRUMB
+  .portlet.box.blue
+    .portlet-title
+      .caption
+        i.icon-globe
+        | 所属的用户组列表
+      .tools
+        a.collapse href="javascript:;" 
+        / a.config data-toggle="modal" href="#portlet-config" 
+        / a.reload href="javascript:;" 
+        / a.remove href="javascript:;" 
+    .portlet-body
+      .clearfix
+		=simple_form_for @admin_user,:url=>grant_admin_user_path,:method=>:post do |f|
+		  /=f.association :user_roles,:as =>:check_boxes
+		  = f.input :roles,label:false do |rf|
+		    - @roles.each do |role|
+		      label.checkbox.inline
+		      	/=f.association :user_roles,:as =>:check_boxes
+		        = check_box_tag 'admin_user[user_roles_attributes][][role_id]', role.id, @admin_user.roles.include?(role)
+		        = role.name
+		  = f.button :submit ,value:"确定",class:'btn green'
