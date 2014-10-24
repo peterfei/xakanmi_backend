@@ -46,6 +46,6 @@ gem 'pry-nav'
 gem "gritter", "1.1.0"
 #用户权限
 gem "cancan"
-
+gem 'rails-i18n'
 # gem 'protected_attributes'
 

@@ -5,9 +5,11 @@ table
     tr
       th Name
       th Category
-      th Status
-      th Startdate
-      th Cid
+      th Courseid
+      th Total
+      th Address
+      th Coursedate
+      th Score
       th
       th
       th
@@ -17,9 +19,11 @@ table
       tr
         td = admin_course.name
         td = admin_course.category
-        td = admin_course.status
-        td = admin_course.startdate
-        td = admin_course.cid
+        td = admin_course.courseid
+        td = admin_course.total
+        td = admin_course.address
+        td = admin_course.coursedate
+        td = admin_course.score
         td = link_to 'Show', admin_course
         td = link_to 'Edit', edit_admin_course_path(admin_course)
         td = link_to 'Destroy', admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete
