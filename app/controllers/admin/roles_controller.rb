@@ -1,7 +1,7 @@
 class Admin::RolesController < AdminController
   before_action :set_admin_role, only: [:show, :edit, :update, :destroy]
   load_and_authorize_resource
-  skip_authorize_resource :only => :grant
+  skip_authorize_resource :only => [:grant,:grant_save]
   # GET /admin/roles
   # GET /admin/roles.json
   def index
@@ -71,7 +71,8 @@ class Admin::RolesController < AdminController
     @role = Admin::Role.find(params[:id])
     permissions = params[:permissions]
     @role.grant(permissions) 
-    redirect_to @role
+    gflash :now,:success => '授权成功'
+    redirect_to admin_roles_url
 
     # @permissions = Admin::Permission.all
   end

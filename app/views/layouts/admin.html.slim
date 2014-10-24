@@ -7,7 +7,7 @@ html lang="en"
   /! BEGIN HEAD
   head
     meta charset="utf-8" /
-    title 后台管理系统
+    title 心霖公社教育培训中心课程系统
     meta content="width=device-width, initial-scale=1.0" name="viewport" /
     /! BEGIN GLOBAL MANDATORY STYLES
     = stylesheet_link_tag    'admin/dashboards'  
@@ -16,7 +16,7 @@ html lang="en"
     = yield :script
   /! END HEAD
   /! BEGIN BODY
-  body.page-header-fixed.page-sidebar-fixed.page-footer-fixed.page-sidebar-closed
+  body.page-header-fixed.page-sidebar-fixed.page-footer-fixed
     /! BEGIN HEADER
     .header.navbar.navbar-inverse.navbar-fixed-top
       /! BEGIN TOP NAVIGATION BAR
@@ -25,7 +25,7 @@ html lang="en"
           /! BEGIN LOGO
           a.brand href="#"
             p 
-              |西安简美网络 
+              |心霖公社教育培训中心
             / img alt="logo" src="#{asset_path('logo.png')}" /
           /! END LOGO
 
@@ -59,13 +59,14 @@ html lang="en"
           /! END RESPONSIVE MENU TOGGLER
           /! BEGIN TOP NAVIGATION MENU
           ul.nav.pull-right
-            li#header_task_bar.dropdown
-              
-              / a.dropdown-toggle data-toggle="dropdown" href="#" 
-              /   i.icon-tasks
+            li.dropdown.user
+              a
+                span.username
+                  |此时您的登陆身份为:
+                  =current_user.roles.map(&:name).join(' ')
             li.dropdown.user
               a.dropdown-toggle data-toggle="dropdown" href="#" 
-                / img alt="" src="#{asset_path('avatar1_small.jpg')}"
+                img alt="" src="#{asset_path('avatar1_small.jpg')}"
                 span.username=current_user.name rescue signin_path
                 i.icon-angle-down
               ul.dropdown-menu
@@ -103,7 +104,7 @@ html lang="en"
     /! BEGIN FOOTER
     .footer
       .footer-inner
-        | 2014 &copy; 西安简美网络.
+        | 技术支持 2014 &copy; 西安简美网络.
       .footer-tools
         span.go-top
           i.icon-angle-up

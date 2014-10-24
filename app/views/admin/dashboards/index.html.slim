@@ -1,23 +1,5 @@
--content_for :sidebar do 
-  .page-sidebar.nav-collapse.collapse
-    /! BEGIN SIDEBAR MENU
-    ul.page-sidebar-menu
-      li
-        /! BEGIN SIDEBAR TOGGLER BUTTON
-        .sidebar-toggler.hidden-phone
-        /! BEGIN SIDEBAR TOGGLER BUTTON
-      li
-        /! BEGIN RESPONSIVE QUICK SEARCH FORM
-        form.sidebar-search
-          .input-box
-            a.remove href="javascript:;" 
-            input placeholder="Search..." type="text" /
-            input.submit type="button" value=(" ") /
-        /! END RESPONSIVE QUICK SEARCH FORM
-      li.start.active
-        a href="javascript:;" 
-          i.icon-home
-          span.title 用户面板
+=render 'share/bar'
+
 -content_for :breadcrumb do 
   ul.breadcrumb
     li
