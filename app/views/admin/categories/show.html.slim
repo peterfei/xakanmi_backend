@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @admin_category.name
+p
+  strong Catid:
+  = @admin_category.catid
+p
+  strong Desc:
+  = @admin_category.desc
+
+= link_to 'Edit', edit_admin_category_path(@admin_category)
+'|
+= link_to 'Back', admin_categories_path
