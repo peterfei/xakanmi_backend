@@ -1,0 +1,29 @@
+h1 Listing admin_courses
+
+table
+  thead
+    tr
+      th Name
+      th Category
+      th Status
+      th Startdate
+      th Cid
+      th
+      th
+      th
+
+  tbody
+    - @admin_courses.each do |admin_course|
+      tr
+        td = admin_course.name
+        td = admin_course.category
+        td = admin_course.status
+        td = admin_course.startdate
+        td = admin_course.cid
+        td = link_to 'Show', admin_course
+        td = link_to 'Edit', edit_admin_course_path(admin_course)
+        td = link_to 'Destroy', admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Course', new_admin_course_path

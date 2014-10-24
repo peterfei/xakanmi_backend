@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @admin_course.name
+p
+  strong Category:
+  = @admin_course.category
+p
+  strong Status:
+  = @admin_course.status
+p
+  strong Startdate:
+  = @admin_course.startdate
+p
+  strong Cid:
+  = @admin_course.cid
+
+= link_to 'Edit', edit_admin_course_path(@admin_course)
+'|
+= link_to 'Back', admin_courses_path

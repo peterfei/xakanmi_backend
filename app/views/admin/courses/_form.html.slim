@@ -1,0 +1,12 @@
+= simple_form_for(@admin_course) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.association :category
+    = f.input :status
+    = f.input :startdate
+    = f.input :cid
+
+  .form-actions
+    = f.button :submit
