@@ -1,0 +1,13 @@
+zh-CN:
+  sys:
+    permissions:
+      Role: 角色管理
+      Role-read: 查看角色
+      Role-create: 新建角色
+      Role-update: 修改角色
+      Role-destroy: 删除角色
+      User: 用户管理
+      User-read: 查看用户
+      User-create: 新建用户
+      User-update: 修改用户
+      User-destroy: 删除用户

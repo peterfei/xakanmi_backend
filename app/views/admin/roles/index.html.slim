@@ -49,7 +49,10 @@
                 /       span.checked
                 /         input.checkboxes checked="checked" type="checkbox" value="1" /
                 td = admin_role.name
-                td.hidden-480 = admin_role.permissions
+                / =t("sys.permissions.#{permission.code}")
+                / td.hidden-480 = t("sys.permissions.#{admin_role.permissions}")
+                td.hidden-480 = render_permissions(admin_role.permissions)
+
                 td
                   .btn-group
                     = link_to  admin_role  do 
