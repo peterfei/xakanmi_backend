@@ -31,6 +31,7 @@ class Ability
     if user
       if !user.permissions.blank?
         user.permissions.split(',').each do |value|
+
           subject, action = value.split('-')
           subject = subject.constantize rescue subject.to_sym
           action  = action.to_sym

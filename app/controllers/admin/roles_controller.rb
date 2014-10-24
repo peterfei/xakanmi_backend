@@ -1,6 +1,7 @@
 class Admin::RolesController < AdminController
   before_action :set_admin_role, only: [:show, :edit, :update, :destroy]
-
+  load_and_authorize_resource
+  skip_authorize_resource :only => :grant
   # GET /admin/roles
   # GET /admin/roles.json
   def index
