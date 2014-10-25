@@ -1,0 +1,31 @@
+h1 Listing admin_students
+
+table
+  thead
+    tr
+      th Snum
+      th Major
+      th Category
+      th Sex
+      th User
+      th Course
+      th
+      th
+      th
+
+  tbody
+    - @admin_students.each do |admin_student|
+      tr
+        td = admin_student.snum
+        td = admin_student.major
+        td = admin_student.category
+        td = admin_student.sex
+        td = admin_student.user
+        td = admin_student.course
+        td = link_to 'Show', admin_student
+        td = link_to 'Edit', edit_admin_student_path(admin_student)
+        td = link_to 'Destroy', admin_student, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Student', new_admin_student_path

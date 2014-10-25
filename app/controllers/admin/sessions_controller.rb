@@ -9,9 +9,8 @@ class Admin::SessionsController < AdminController
     user = User.find_by(email: params[:session][:email].downcase)
     if user && user.authenticate(params[:session][:password])
       sign_in user
-      gflash :now,:success => '登陆成功',
-                  :notice => { :value => "恭喜您", :sticky => true }
-      redirect_to admin_dashboards_path
+      gflash :now,:success => '登陆成功'
+      redirect_to admin_courses_path(course:'active')
     else
       gflash :error => '错误的用户名或密码'
       # flash.now[:error] = '错误的用户名或密码'

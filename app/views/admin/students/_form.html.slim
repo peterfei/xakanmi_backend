@@ -1,0 +1,13 @@
+= simple_form_for(@admin_student) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :snum
+    = f.input :major
+    = f.association :category
+    = f.input :sex
+    = f.association :user
+    = f.association :course
+
+  .form-actions
+    = f.button :submit

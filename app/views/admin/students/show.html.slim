@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Snum:
+  = @admin_student.snum
+p
+  strong Major:
+  = @admin_student.major
+p
+  strong Category:
+  = @admin_student.category
+p
+  strong Sex:
+  = @admin_student.sex
+p
+  strong User:
+  = @admin_student.user
+p
+  strong Course:
+  = @admin_student.course
+
+= link_to 'Edit', edit_admin_student_path(@admin_student)
+'|
+= link_to 'Back', admin_students_path

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141024184050) do
+ActiveRecord::Schema.define(version: 20141024185952) do
 
   create_table "admin_categories", force: true do |t|
     t.string   "name"
@@ -54,6 +54,21 @@ ActiveRecord::Schema.define(version: 20141024184050) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "admin_students", force: true do |t|
+    t.string   "snum"
+    t.string   "major"
+    t.integer  "category_id"
+    t.boolean  "sex"
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "admin_students", ["category_id"], name: "index_admin_students_on_category_id"
+  add_index "admin_students", ["course_id"], name: "index_admin_students_on_course_id"
+  add_index "admin_students", ["user_id"], name: "index_admin_students_on_user_id"
 
   create_table "admin_user_roles", force: true do |t|
     t.integer  "user_id"

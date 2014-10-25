@@ -1,33 +1,88 @@
-h1 Listing admin_courses
+=render 'share/bar'
+.portlet.box.blue
+  .portlet-title
+    .caption
+      i.icon-globe
+      | 报名选课
+    .tools
+      a.collapse href="javascript:;" 
+      / a.config data-toggle="modal" href="#portlet-config" 
+      / a.reload href="javascript:;" 
+      / a.remove href="javascript:;" 
+  .portlet-body
+    .clearfix
+      .btn-group
+        =link_to  new_admin_course_path  do 
+          button#sample_editable_1_new.btn.green 新增课程
+          i.icon-plus
+    #sample_1_wrapper.dataTables_wrapper.form-inline role="grid" 
+      .row-fluid
+        .span6
+          #sample_1_filter.dataTables_filter
+            label
+              | 查询:
+              input.m-wrap.medium aria-controls="sample_1" type="text" /
+      table#sample_1.table.table-striped.table-bordered.table-hover.dataTable aria-describedby="sample_1_info" 
+        thead
+          tr role="row"
+            th   课程名称
+            th   分类
+            th   课程编号
+            th   人数
+            th   上课教室
+            th   上课时间
+            th   学分
+            th   操作
+        tbody aria-live="polite" aria-relevant="all" role="alert"
+          - @admin_courses.each do |admin_course|
+            tr.gradeX.odd
+              td =admin_course.name
+              td = admin_course.category
+              td = admin_course.courseid
+              td = admin_course.total
+              td = admin_course.address
+              td = admin_course.coursedate
+              td = admin_course.score
+              td
+                .btn-group
+                  = link_to admin_course do 
+                    button.btn.blue 选课
+                  = link_to  admin_course do 
+                    button.btn.blue 显示
+                  = link_to  edit_admin_course_path(admin_course) do 
+                    button.btn.blue 编辑
+                  = link_to  admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete do 
+                    button.btn.blue 删除
+/ h1 Listing admin_courses
 
-table
-  thead
-    tr
-      th Name
-      th Category
-      th Courseid
-      th Total
-      th Address
-      th Coursedate
-      th Score
-      th
-      th
-      th
+/ table
+/   thead
+/     tr
+/       th Name
+/       th Category
+/       th Courseid
+/       th Total
+/       th Address
+/       th Coursedate
+/       th Score
+/       th
+/       th
+/       th
 
-  tbody
-    - @admin_courses.each do |admin_course|
-      tr
-        td = admin_course.name
-        td = admin_course.category
-        td = admin_course.courseid
-        td = admin_course.total
-        td = admin_course.address
-        td = admin_course.coursedate
-        td = admin_course.score
-        td = link_to 'Show', admin_course
-        td = link_to 'Edit', edit_admin_course_path(admin_course)
-        td = link_to 'Destroy', admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete
+/   tbody
+/     - @admin_courses.each do |admin_course|
+/       tr
+/         td = admin_course.name
+/         td = admin_course.category
+/         td = admin_course.courseid
+/         td = admin_course.total
+/         td = admin_course.address
+/         td = admin_course.coursedate
+/         td = admin_course.score
+/         td = link_to 'Show', admin_course
+/         td = link_to 'Edit', edit_admin_course_path(admin_course)
+/         td = link_to 'Destroy', admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete
 
-br
+/ br
 
-= link_to 'New Course', new_admin_course_path
+/ = link_to 'New Course', new_admin_course_path

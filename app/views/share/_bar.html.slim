@@ -14,12 +14,12 @@
         a href="#{admin_roles_path(role:'active')}" 
           i.icon-sitemap
           span.title 权限管理
-      li.start class="#{params[:baoming]}"
-        a href="#{admin_roles_path}" 
+      li.start class="#{params[:course]}"
+        a href="#{admin_courses_path(course:'active')}" 
           i.icon-edit
           span.title 报名选课
       li.start class="#{params[:score]}"
-        a href="#{admin_roles_path}" 
+        a href="#{admin_courses_path}" 
           i.icon-search
           span.title 学分查询
       li.start class="#{params[:scduce]}"

@@ -6,6 +6,7 @@ class Admin::DashboardsController < AdminController
   # GET /admin/dashboards.json
   def index
     @admin_dashboards = Admin::Dashboard.all
+    
   end
 
   # GET /admin/dashboards/1
