@@ -12,9 +12,10 @@
   .portlet-body
     .clearfix
       .btn-group
-        =link_to  new_admin_course_path  do 
-          button#sample_editable_1_new.btn.green 新增课程
-          i.icon-plus
+        -if can? :create, Admin::Course
+          =link_to  new_admin_course_path  do 
+            button#sample_editable_1_new.btn.green 新增课程
+            i.icon-plus
     #sample_1_wrapper.dataTables_wrapper.form-inline role="grid" 
       .row-fluid
         .span6
@@ -35,24 +36,27 @@
             th   操作
         tbody aria-live="polite" aria-relevant="all" role="alert"
           - @admin_courses.each do |admin_course|
-            tr.gradeX.odd
-              td =admin_course.name
-              td = admin_course.category
-              td = admin_course.courseid
-              td = admin_course.total
-              td = admin_course.address
-              td = admin_course.coursedate
-              td = admin_course.score
-              td
-                .btn-group
-                  = link_to admin_course do 
-                    button.btn.blue 选课
-                  = link_to  admin_course do 
-                    button.btn.blue 显示
-                  = link_to  edit_admin_course_path(admin_course) do 
-                    button.btn.blue 编辑
-                  = link_to  admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete do 
-                    button.btn.blue 删除
+            -unless admin_course.student.present?
+              tr.gradeX.odd
+                td =admin_course.name
+                td = admin_course.category
+                td = admin_course.courseid
+                td = admin_course.total
+                td = admin_course.address
+                td = admin_course.coursedate
+                td = admin_course.score
+                td
+                  .btn-group
+                    -if can? :choosecourse,Admin::Course
+                      = link_to choosecourse_admin_course_path(admin_course),remote:true do 
+                        button.btn.blue 选课
+                    / = link_to  admin_course do 
+                    /   button.btn.blue 显示
+                    -if can? :edit,Admin::Course
+                      = link_to  edit_admin_course_path(admin_course) do 
+                        button.btn.blue 编辑
+                      = link_to  admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete do 
+                        button.btn.blue 删除
 / h1 Listing admin_courses
 
 / table

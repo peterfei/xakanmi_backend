@@ -1,6 +1,6 @@
 class Admin::StudentsController < ApplicationController
   before_action :set_admin_student, only: [:show, :edit, :update, :destroy]
-
+  # load_and_authorize_resource
   # GET /admin/students
   # GET /admin/students.json
   def index
@@ -25,7 +25,7 @@ class Admin::StudentsController < ApplicationController
   # POST /admin/students.json
   def create
     @admin_student = Admin::Student.new(admin_student_params)
-
+   
     respond_to do |format|
       if @admin_student.save
         format.html { redirect_to @admin_student, notice: 'Student was successfully created.' }
@@ -61,6 +61,7 @@ class Admin::StudentsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_student
@@ -69,6 +70,7 @@ class Admin::StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_student_params
+      binding.pry
       params.require(:admin_student).permit(:snum, :major, :category_id, :sex, :user_id, :course_id)
     end
 end

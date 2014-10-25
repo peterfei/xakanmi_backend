@@ -1,6 +1,6 @@
 class Admin::UserRolesController < ApplicationController
   before_action :set_admin_user_role, only: [:show, :edit, :update, :destroy]
-  load_and_authorize_resource
+  # load_and_authorize_resource
 
   # GET /admin/user_roles
   # GET /admin/user_roles.json

@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 puts 'Installing permissions...'
 permissions = {}
-models = %w(Admin::Role Admin::User )
+models = %w(Admin::Role Admin::User Admin::Student Admin::Course)
 base_actions = %w(read create update destroy)
 models.each { |model| permissions[model] = base_actions }
 puts "  Deleting pevious permissions..."
@@ -19,3 +19,6 @@ permissions.each_pair do |subject, actions|
     puts "    #{permission.code}"
   end
 end
+
+#增加选课权限
+Admin::Permission.create(subject: "Admin::Course", action: 'choosecourse')

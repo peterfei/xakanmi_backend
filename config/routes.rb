@@ -1,10 +1,16 @@
 Rails.application.routes.draw do
   namespace :admin do
-    resources :students
+    resources :students do 
+      
+    end
   end
 
   namespace :admin do
-    resources :courses
+    resources :courses do 
+      member do 
+        get 'choosecourse'
+      end
+    end
   end
 
   namespace :admin do

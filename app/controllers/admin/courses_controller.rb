@@ -1,6 +1,6 @@
 class Admin::CoursesController < AdminController
-  before_action :set_admin_course, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_admin_course, only: [:show, :edit, :update, :destroy,:choosecourse]
+  # load_and_authorize_resource
   # GET /admin/courses
   # GET /admin/courses.json
   def index
@@ -61,6 +61,17 @@ class Admin::CoursesController < AdminController
     end
   end
 
+  #学生选课
+  def choosecourse
+    #当前用户信息
+    # binding.pry
+    # student = @admin_course.build_student
+    # student.save
+     @choose = current_user.student.update_attribute(:course_id,params[:id])
+     respond_to do |format|
+        format.js 
+     end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_course

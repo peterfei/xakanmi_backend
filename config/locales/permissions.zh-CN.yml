@@ -11,3 +11,14 @@ zh-CN:
       Admin::User-create: 新建用户
       Admin::User-update: 修改用户
       Admin::User-destroy: 删除用户
+      Admin::Student: 学生信息管理
+      Admin::Student-read: 查看学生信息
+      Admin::Student-create: 新建学生信息
+      Admin::Student-update: 修改学生信息
+      Admin::Student-destroy: 删除学生信息
+      Admin::Course: 课程信息管理
+      Admin::Course-choosecourse: 选课
+      Admin::Course-read: 查看课程信息
+      Admin::Course-create: 新建课程信息
+      Admin::Course-update: 修改课程信息
+      Admin::Course-destroy: 删除课程信息

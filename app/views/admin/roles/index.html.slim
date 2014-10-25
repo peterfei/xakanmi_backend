@@ -24,9 +24,10 @@
     .portlet-body
       .clearfix
         .btn-group
-          =link_to  new_admin_role_path  do 
-            button#sample_editable_1_new.btn.green 新增用户角色
-            i.icon-plus
+          -if can? :create,Admin::Role 
+            =link_to  new_admin_role_path  do 
+              button#sample_editable_1_new.btn.green 新增用户角色
+              i.icon-plus
       #sample_1_wrapper.dataTables_wrapper.form-inline role="grid" 
         .row-fluid
           .span6

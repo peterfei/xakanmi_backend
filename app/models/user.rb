@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
   has_many :roles, through: :user_roles,class_name:"Admin::Role"
   accepts_nested_attributes_for :user_roles, allow_destroy: true
   after_save :grant_permissions
-  
+  has_one :student,class_name:"Admin::Student"
+
   def admin?
     email == 'admin@admin.com'
   end

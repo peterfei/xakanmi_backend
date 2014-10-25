@@ -4,7 +4,7 @@ class Admin::UsersController < AdminController
   # GET /admin/users
   # GET /admin/users.json
   before_action :set_roles
-  load_and_authorize_resource
+  # load_and_authorize_resource
   skip_authorize_resource :only => [:grant]
   def index
     @admin_users = Admin::User.all
