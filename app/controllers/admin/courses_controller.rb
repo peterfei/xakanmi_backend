@@ -3,6 +3,8 @@ class Admin::CoursesController < AdminController
   # load_and_authorize_resource
   # GET /admin/courses
   # GET /admin/courses.json
+  skip_authorize_resource :only => [:index]
+
   def index
     @admin_courses = Admin::Course.all
   end

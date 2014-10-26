@@ -1,7 +1,8 @@
 class Admin::DashboardsController < AdminController
   before_action :set_admin_dashboard, only: [:show, :edit, :update, :destroy]
   # layout 'admin'
-  
+  skip_authorize_resource :only => [:index]
+
   # GET /admin/dashboards
   # GET /admin/dashboards.json
   def index
