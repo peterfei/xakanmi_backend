@@ -28,7 +28,10 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/ryanb/cancan/wiki/Defining-Abilities
-    if user
+    # binding.pry
+    if user.id==1
+       can :manage, :all
+    else
       if !user.permissions.blank?
         user.permissions.split(',').each do |value|
 
