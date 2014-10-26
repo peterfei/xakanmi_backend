@@ -1,7 +1,8 @@
-class Admin::SessionsController < AdminController
+class Admin::SessionsController < ApplicationController
   layout 'signinout'
   skip_before_filter :verify_authenticity_token  
-
+  # skip_authorize_resource 
+  skip_before_filter :require_no_authentication 
   def new
   end
 
