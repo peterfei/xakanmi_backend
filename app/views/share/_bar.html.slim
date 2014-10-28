@@ -6,14 +6,15 @@
         /! BEGIN SIDEBAR TOGGLER BUTTON
         .sidebar-toggler.hidden-phone
         /! BEGIN SIDEBAR TOGGLER BUTTON
-      li.start class="#{params[:user]}"
-        a href="#{admin_users_path(user:'active')}" 
-          i.icon-user
-          span.title 用户管理
-      li.start class="#{params[:role]}"
-        a href="#{admin_roles_path(role:'active')}" 
-          i.icon-sitemap
-          span.title 权限管理
+      -if current_user.id==1
+        li.start class="#{params[:user]}"
+          a href="#{admin_users_path(user:'active')}" 
+            i.icon-user
+            span.title 用户管理
+        li.start class="#{params[:role]}"
+          a href="#{admin_roles_path(role:'active')}" 
+            i.icon-sitemap
+            span.title 权限管理
       li.start class="#{params[:course]}"
         a href="#{admin_courses_path(course:'active')}" 
           i.icon-edit
