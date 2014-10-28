@@ -70,7 +70,7 @@ class Admin::StudentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_student_params
-      binding.pry
+      # binding.pry
       params.require(:admin_student).permit(:snum, :major, :category_id, :sex, :user_id, :course_id)
     end
 end

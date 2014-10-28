@@ -1,0 +1,81 @@
+doctype html
+/![if IE 8] <html lang="en" class="ie8"
+/![if IE 9] <html lang="en" class="ie9"
+/! [if !IE]><!
+html lang="en" 
+  /! <![endif]
+  /! BEGIN HEAD
+  head
+    meta charset="utf-8" /
+    title 心霖公社教育培训中心课程系统
+    meta content="width=device-width, initial-scale=1.0" name="viewport" /
+    /! BEGIN GLOBAL MANDATORY STYLES
+    = stylesheet_link_tag    'home'
+  body  
+    .container-fluid.promo-page
+      .block-grey
+        .row-fluid
+          .span12
+            h3 
+              |心霖公社教育培训中心课程系统
+        .row-fluid
+          .span8
+            img.img-rounded  src="/assets/ccc.jpg" /
+            h3 本院通知公告
+            table.table
+              thead
+                tr
+                  th
+                    | 公告标题
+                  th
+                    | 公布单位
+                  th
+                    | 公布时间
+              tbody
+                tr
+                  td
+                    | 现有课程
+                  td
+                    | 初一英语
+                  td
+                    | 01/04/2012
+                  
+                tr.success
+                  td
+                    | 现有课程
+                  td
+                    | 初一英语
+                  td
+                    | 01/04/2012
+                  
+                
+          .span4
+            form.form-horizontal
+              .field-set 
+                legend 
+                  |用户登陆
+              .control-group
+                label.control-label for="inputEmail"  用户名
+                .controls
+                  input#inputEmail type="text" /
+              .control-group
+                label.control-label for="inputPassword"  密码
+                .controls
+                  input#inputPassword type="password" /
+              .control-group
+                .controls
+                  label.radio
+                    input type="radio" /
+                    | 老师
+                  label.radio
+                    input type="radio" /
+                    | 学生
+                  button.btn type="submit"  登陆
+            h3 
+              |下载区域
+            ul
+              li
+                | 新闻资讯
+              li
+                | 体育竞技
+              

@@ -57,6 +57,29 @@
                         button.btn.blue 编辑
                       = link_to  admin_course, data: {:confirm => 'Are you sure?'}, :method => :delete do 
                         button.btn.blue 删除
+.portlet.box.blue
+  .portlet-title
+    .caption
+      i.icon-globe
+      | 已选课程
+  .portlet-body
+    .clearfix
+    table#sample_1.table.table-striped.table-bordered.table-hover.dataTable aria-describedby="sample_1_info"
+      thead
+        tr role="row"
+          th   课程名称
+          th   选课学生
+          th   上课教室
+          th   上课时间
+      tbody aria-live="polite" aria-relevant="all" role="alert"
+        - @admin_courses.each do |admin_course|
+          -if  admin_course.student.present?
+            tr.gradeX.odd
+              td=admin_course.name
+              td=admin_course.student.user rescue ''
+              td=admin_course.address
+              td = admin_course.coursedate
+
 / h1 Listing admin_courses
 
 / table
