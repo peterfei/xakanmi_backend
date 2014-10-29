@@ -3,38 +3,20 @@ Rails.application.routes.draw do
     resources :students do 
       
     end
-  end
-
-  namespace :admin do
     resources :courses do 
       member do 
         get 'choosecourse'
       end
     end
-  end
-
-  namespace :admin do
     resources :categories
-  end
-
-  namespace :admin do
     resources :user_roles
-  end
-
-  namespace :admin do
     resources :permissions
-  end
-
-  namespace :admin do
     resources :roles do 
       member do
         get 'grant'
         patch 'grant_save'
       end
     end
-  end
-
-  namespace :admin do
     resources :users do
       member do
         get 'grant' 
@@ -43,7 +25,7 @@ Rails.application.routes.draw do
     end
     resources :dashboards
     resources :sessions, only: [:new, :create, :destroy]
-    # root to: 'admin#dashboards'
+    get 'homework'=>'homework#index'
   end
   match '/signup',  to: 'users#new',            via: 'get'
   match '/signin',  to: 'admin/sessions#new',         via: 'get'

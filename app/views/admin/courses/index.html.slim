@@ -76,7 +76,8 @@
           -if  admin_course.student.present?
             tr.gradeX.odd
               td=admin_course.name
-              td=admin_course.student.user rescue ''
+              td=current_user
+              / td=admin_course.student.user rescue ''
               td=admin_course.address
               td = admin_course.coursedate
 
