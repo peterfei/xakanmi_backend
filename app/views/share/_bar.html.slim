@@ -6,7 +6,7 @@
         /! BEGIN SIDEBAR TOGGLER BUTTON
         .sidebar-toggler.hidden-phone
         /! BEGIN SIDEBAR TOGGLER BUTTON
-      -if current_user.id==1
+      -if current_user.name=='admin'
         li.start class="#{params[:user]}"
           a href="#{admin_users_path(user:'active')}" 
             i.icon-user
@@ -15,58 +15,61 @@
           a href="#{admin_roles_path(role:'active')}" 
             i.icon-sitemap
             span.title 权限管理
-      li.start class="#{params[:course]}"
-        a href="#{admin_courses_path(course:'active')}" 
-          i.icon-edit
-          span.title 报名选课
-      li.start class="#{params[:score]}"
-        a href="#{admin_courses_path}" 
-          i.icon-search
-          span.title 学分查询
-      li.start class="#{params[:scduce]}"
-        a href="#{admin_roles_path}" 
-          i.icon-folder-open
-          span.title 查看课表
-      li.start class="#{params[:homework]}"
-        a href="#{admin_roles_path}" 
-          i.icon-book
-          span.title 上传作业
-      li.start class="#{params[:comment]}"
-        a href="#{admin_roles_path}" 
-          i.icon-check
-          span.title 教师评价
-      li.start class="#{params[:tongzhi]}"
-        a href="#{admin_roles_path}" 
-          i.icon-bell
-          span.title 查看公告
-      li.start class="#{params[:studentmanager]}"
-        a href="#{admin_roles_path}" 
-          i.icon-group
-          span.title 学生管理
-      li.start class="#{params[:tmanager]}"
-        a href="#{admin_roles_path}" 
-          i.icon-male
-          span.title 教师管理
-      li.start class="#{params[:kcmanager]}"
-        a href="#{admin_roles_path}" 
-          i.icon-file-text
-          span.title 课程管理
-      li.start class="#{params[:note]}"
-        a href="#{admin_roles_path}" 
-          i.icon-bell
-          span.title 发布公告
-      li.start class="#{params[:paike]}"
-        a href="#{admin_roles_path}" 
-          i.icon-calendar
-          span.title 排课管理
-      li.start class="#{params[:pingjia]}"
-        a href="#{admin_roles_path}" 
-          i.icon-heart
-          span.title 教学评价
-      li.start class="#{params[:cailiao]}"
-        a href="#{admin_roles_path}" 
-          i.icon-wrench
-          span.title 教材资料
+      -if current_user.student.present?
+        li.start class="#{params[:course]}"
+          a href="#{admin_courses_path(course:'active')}" 
+            i.icon-edit
+            span.title 报名选课
+        li.start class="#{params[:score]}"
+          a href="#{admin_courses_path}" 
+            i.icon-search
+            span.title 学分查询
+        li.start class="#{params[:scduce]}"
+          a href="#{admin_roles_path}" 
+            i.icon-folder-open
+            span.title 查看课表
+        li.start class="#{params[:homework]}"
+          a href="#{admin_roles_path}" 
+            i.icon-book
+            span.title 上传作业
+        li.start class="#{params[:comment]}"
+          a href="#{admin_roles_path}" 
+            i.icon-check
+            span.title 教师评价
+        li.start class="#{params[:tongzhi]}"
+          a href="#{admin_roles_path}" 
+            i.icon-bell
+            span.title 查看公告
+      -else
+        li.start class="#{params[:studentmanager]}"
+          a href="#{admin_roles_path}" 
+            i.icon-group
+            span.title 学生管理
+
+        li.start class="#{params[:tmanager]}"
+          a href="#{admin_roles_path}" 
+            i.icon-male
+            span.title 教师管理
+        li.start class="#{params[:kcmanager]}"
+          a href="#{admin_roles_path}" 
+            i.icon-file-text
+            span.title 课程管理
+        li.start class="#{params[:note]}"
+          a href="#{admin_roles_path}" 
+            i.icon-bell
+            span.title 发布公告
+        li.start class="#{params[:paike]}"
+          a href="#{admin_roles_path}" 
+            i.icon-calendar
+            span.title 排课管理
+        li.start class="#{params[:pingjia]}"
+          a href="#{admin_roles_path}" 
+            i.icon-heart
+            span.title 教学评价
+        li.start class="#{params[:cailiao]}"
+          a href="#{admin_roles_path}" 
+            i.icon-wrench
+            span.title 教材资料
 /coffee:
 /  $ ->
 /    $('ul.page-sidebar-menu li').on 'click',->
